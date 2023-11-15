@@ -32,7 +32,7 @@
     right:10px;
     width: 50px;
     height: 50px;
-    background-color: rgb(255, 166, 0);
+    background-color: rgb(236, 239, 194);
     border-radius: 10px;
   }
 /*at index*/
@@ -109,8 +109,8 @@ h2{
 .scroll-item {
         display: inline-block;
         width: 200px; /* Adjust the width of each square image as needed */
-        background-color:rgb(236, 239,194, 1);
-        border-radius: 30px;
+        background-color: rgb(103, 164,113, 1);border-radius: 30px;
+        color:white;
         padding-left:15px;
         height: 200px;
         margin: 10px;
@@ -133,7 +133,7 @@ h2{
 
 .scroll-item2 {
         display: inline-block;
-        width: 85%; /* Adjust the width of each square image as needed */
+        width: calc(100vw - 50px); /* Adjust the width of each square image as needed */
         background-color: rgb(246, 246, 246);
         border-radius: 15px;
         padding-left:15px;
@@ -161,6 +161,7 @@ h2{
     font-size: 16px;
     cursor: pointer;
     display: inline-block;
+    width:70%;
 }
 
 
@@ -192,4 +193,10 @@ h2{
   margin-bottom: 50px;
   margin-top:50px;
 }
- 
+.morequestion{
+  margin:40px;
+  height:200px; 
+  width:92vw; 
+  background-color: rgb(246, 246, 246);
+  border-radius: 15px;
+}

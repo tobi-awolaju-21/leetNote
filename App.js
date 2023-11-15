@@ -14,3 +14,16 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'notes.html';
     }); 
 });
+
+
+//listen to note clicked after notes have been loaded 
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the element with the class 'scroll-item2'
+    var scrollItem = document.querySelector('morequestion');
+
+    // Add a click event listener to the element
+    scrollItem.addEventListener('click', function() {
+        // Redirect to 'notes.html' when the element is clicked
+        window.location.href = 'notes.html';
+    }); 
+});
