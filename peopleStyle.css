@@ -1,0 +1,130 @@
+
+.tipBar {
+    position: sticky;
+    top: 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.064); /* Adjust the shadow as needed */    
+    width: 100vw;
+    height:70px;
+    
+  }
+  .fab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right:10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(236, 239, 194);
+    border-radius: 10px;
+   
+  }
+/*at index*/
+  .peopleSpaces{
+    background-color: rgb(255, 255, 255);
+    width:100vw;
+    height: 200px;
+  }
+/*at index*/
+  .peopleCourses{
+    background-color:  rgb(255, 255, 255);
+    width:100vw;
+    height: calc(100vh - 270px);
+    margin-top: 30px;
+  }
+
+
+  /*at all*/
+body {
+   background-color: rgb(255, 255, 255);
+   padding: 0px;
+   margin: 0px;
+  }
+/*at all*/
+h2{
+    margin: 0px;
+    padding-top: 8px;
+    padding-left: 8px;
+    font-weight: 400;
+  }
+  /*at all*/
+  h3{
+    padding-right:20px;
+    margin: 0px;
+    font-weight: 200;
+    color: rgb(208, 208, 208);
+  }
+
+
+
+.scroll-container {
+        width: 100vw;
+        height: calc(100vh - 270px);
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+.scroll-item {
+        display: inline-block;
+        width: 200px; /* Adjust the width of each square image as needed */
+        background-color:rgb(236, 239,194, 1);
+        border-radius: 30px;
+        padding-left:15px;
+        height: 200px;
+        margin: 10px;
+        /*text-align: center;*/
+    }
+
+.scroll-item img {
+     
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+.scroll-item p {
+  
+        margin: 0;
+    }
+
+
+
+.scroll-item2 {
+        display: inline-block;
+        width: 85%; /* Adjust the width of each square image as needed */
+        background-color: rgb(246, 246, 246);
+        border-radius: 15px;
+        padding-left:15px;
+        padding-right:15px;
+        height: 100px;
+        margin: 10px;
+   
+    }
+
+
+
+
+    /* Styles for the progress bar container */
+    .progress-container {
+      width: 95%;/* Adjust the width as needed */
+      background-color: #ffe7a0; /* Amber background color */
+      border-radius: 10px; /* Rounded corners */
+      overflow: hidden;
+      margin-top:10px;
+      height:15px;
+    }
+
+    /* Styles for the progress bar filler */
+    .progress-filler {
+      height: 15px; /* Adjust the height as needed */
+      background-color: rgb(255, 204, 0); /* Orange filling color */
+      border-radius: 10px; /* Rounded corners */
+      transition: width 0.3s ease-in-out; /* Add a smooth transition effect */
+    }
+  
+  
+  
+
+ 
