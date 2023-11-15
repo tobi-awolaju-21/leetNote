@@ -21,7 +21,19 @@
     height: 50px;
     background-color: rgb(236, 239, 194);
     border-radius: 10px;
-   
+  }
+
+  .notefab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right:10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 166, 0);
+    border-radius: 10px;
   }
 /*at index*/
   .peopleSpaces{
@@ -131,10 +143,28 @@ h2{
    
     }
 
+    .note-tile{
+      display: inline-block;
+      width: 85%; /* Adjust the width of each square image as needed */
+      background-color: rgb(246, 246, 246);
+      border-radius: 15px;
+      padding-left:15px;
+      padding-right:15px;
+      height: 100px;
+      margin: 10px;
+ 
+  }
+  .submit-button {
+    background-color: rgba(236, 239, 194, 1);
+    border-radius: 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
 
 
-
-    /* Styles for the progress bar container */
+   /* Styles for the progress bar container */
     .progress-container {
       width: 95%;/* Adjust the width as needed */
       background-color: #ffe7a0; /* Amber background color */
@@ -151,8 +181,15 @@ h2{
       border-radius: 10px; /* Rounded corners */
       transition: width 0.3s ease-in-out; /* Add a smooth transition effect */
     }
-  
-  
-  
 
+.player{
+  background-color: rgb(103, 164,113, 1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.17); 
+  z-index: 1;
+  height:200px;
+  width:92vw;
+  margin: 10px;
+  margin-bottom: 50px;
+  margin-top:50px;
+}
  
