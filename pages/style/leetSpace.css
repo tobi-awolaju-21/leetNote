@@ -1,0 +1,295 @@
+
+  /*at all*/
+  body {
+    background-color: rgb(255, 255, 255);
+    padding: 0px;
+    margin: 0px;
+   }
+   .tipBar {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.064); /* Adjust the shadow as needed */    
+    width: 100vw;
+    height:70px;
+    z-index: 1; /* Ensure it's above other content */
+     
+  }
+
+  .user{
+    margin-right: 20px;
+  }
+
+  
+  .fab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right:10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(236, 239, 194);
+    border-radius: 10px;
+  }
+
+  .notefab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right:10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(236, 239, 194);
+    border-radius: 10px;
+  }
+.testfab{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 10px;
+  right:10px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(236, 239, 194);
+  border-radius: 10px; 
+}
+
+/*at index*/
+  .peopleSpaces{
+    background-color: rgb(255, 255, 255);
+    width:100vw;
+    height: 200px;
+  }
+/*at index*/
+  .peopleCourses{
+    background-color:  rgb(255, 255, 255);
+    width:100vw;
+    height: calc(100vh - 270px);
+    margin-top: 30px;
+  }
+
+
+
+/*at all*/
+h2{
+    margin: 0px;
+    padding-top: 8px;
+    padding-left: 8px;
+    font-weight: 400;
+  }
+  /*at all*/
+  h3{
+    padding-right:20px;
+    margin: 0px;
+    font-weight: 200;
+    color: rgb(208, 208, 208);
+  }
+  h1{
+    font-weight: 400;
+    padding:0px;
+    margin:0px; 
+  }
+  h4{
+    font-weight: 200; 
+    padding:0px;
+    margin:0px; 
+  }
+
+  .status{
+  background-color: black;
+  width:35px;
+  margin:5px;
+  color:white;
+  border-radius: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top:3px;
+  padding-bottom:3px;
+  }
+  .status2{
+    position:relative;
+    bottom:-100px;
+  }
+
+
+
+.scroll-container {
+        width: 100vw;
+        height: calc(100vh - 270px);
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+.scroll-item {
+        display: inline-block;
+        width: 200px; /* Adjust the width of each square image as needed */
+        background-color: rgb(103, 164,113, 1);border-radius: 30px;
+        color:white;
+        padding-left:15px;
+        height: 200px;
+        margin: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.17); 
+        z-index: 1;
+        /*text-align: center;*/
+    }
+
+.scroll-item img {
+     
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+.scroll-item p {
+  
+        margin: 0;
+    }
+
+
+
+.scroll-item2 {
+        display: inline-block;
+        width: calc(100vw - 50px); /* Adjust the width of each square image as needed */
+        background-color: rgb(246, 246, 246);
+        border-radius: 15px;
+        padding-left:15px;
+        padding-right:15px;
+        height: 100px;
+        margin: 10px;
+   
+    }
+
+    .note-tile{
+      display: inline-block;
+      width: 85%; /* Adjust the width of each square image as needed */
+      background-color: rgb(246, 246, 246);
+      border-radius: 15px;
+      padding-left:15px;
+      padding-right:15px;
+      height: 100px;
+      margin: 10px;
+ 
+  }
+  .submit-button {
+    background-color: rgba(236, 239, 194, 1);
+    border-radius:50px;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    width:25%;
+    color:rgba(240, 248, 255, 0);
+    position:absolute;
+    right:20px;
+}
+
+
+   /* Styles for the progress bar container */
+    .progress-container {
+      width: 95%;/* Adjust the width as needed */
+      background-color: #ffe7a0; /* Amber background color */
+      border-radius: 10px; /* Rounded corners */
+      overflow: hidden;
+      margin-top:10px;
+      height:12px;
+    }
+
+    /* Styles for the progress bar filler */
+    .progress-filler {
+      height: 12px; /* Adjust the height as needed */
+      background-color: rgb(255, 204, 0); /* Orange filling color */
+      border-radius: 10px; /* Rounded corners */
+      transition: width 0.3s ease-in-out; /* Add a smooth transition effect */
+    }
+
+.player{
+  background-color: rgb(103, 164,113, 1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.17); 
+  z-index: 1;
+  height:250px;
+  width:92vw;
+  margin: 10px;
+  margin-bottom: 50px;
+  margin-top:50px;
+}
+
+
+/* this is for leetSpace*/
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 70px);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.chat-message {
+  padding: 10px;
+  max-width: 60vw;
+  min-width: 10vw;
+  margin-bottom: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+
+.chat-message-author {
+  font-weight: bold;
+}
+
+.chat-message-timestamp {
+  font-size: 12px;
+  color: #999;
+}
+
+.chat-input-container {
+  display: flex;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+
+#chat-send-button {
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: rgb(53, 121, 70);
+  color: #fff;
+  border-radius: 50px;
+  width:80px;
+  border: none;
+  cursor: pointer;
+}
+#leave-button{
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.059);
+  color: #000;
+  border-radius: 50px;
+  width:80px;
+  border: none;
+  cursor: pointer; 
+}

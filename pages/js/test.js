@@ -16,14 +16,35 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-//listen to note clicked after notes have been loaded 
 document.addEventListener('DOMContentLoaded', function() {
     // Get the element with the class 'scroll-item2'
-    var scrollItem = document.querySelector('morequestion');
+    var scrollItem = document.querySelector('.scroll-item');
 
     // Add a click event listener to the element
     scrollItem.addEventListener('click', function() {
         // Redirect to 'notes.html' when the element is clicked
-        window.location.href = 'notes.html';
+        window.location.href = 'leetspace.html';
     }); 
 });
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the element with the class 'scroll-item2'
+    var scrollItem = document.querySelector('.notefab');
+
+    // Add a click event listener to the element
+    scrollItem.addEventListener('click', function() {
+        // Redirect to 'notes.html' when the element is clicked
+        window.location.href = 'test.html';
+    }); 
+});
+
+
+
+
+
+
