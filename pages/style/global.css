@@ -87,7 +87,7 @@ h2{
     }
 
 .player{
-  background-color:  rgba(103, 164,113, 1);
+  background-color:  rgb(0, 0, 0);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.17); 
   z-index: 1;
   height:250px;
