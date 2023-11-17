@@ -5,6 +5,7 @@
     padding: 0px;
     margin: 0px;
    }
+
    .tipBar {
     display: flex;
     justify-content: space-between;
@@ -22,7 +23,7 @@
     margin-right: 20px;
   }
 
-  
+
   .fab{
     display: flex;
     justify-content: center;

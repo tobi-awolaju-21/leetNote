@@ -6,7 +6,9 @@
     margin: 0px;
    }
 
-.tipBar {
+   .tipBar {
+    display: flex;
+    justify-content: space-between;
     position: sticky;
     top: 0px;
     background-color: rgb(255, 255, 255);
@@ -14,9 +16,14 @@
     width: 100vw;
     height:70px;
     z-index: 1; /* Ensure it's above other content */
-        
-    
+     
   }
+
+  .user{
+    margin-right: 20px;
+  }
+
+  
   .fab{
     display: flex;
     justify-content: center;
