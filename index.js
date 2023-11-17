@@ -2,7 +2,6 @@
 //load personalized people course based on users info, else bring up login dialog on index.
 // change txt peoople notes to username note
 
-
 //listen to note clicked after notes have been loaded 
 document.addEventListener('DOMContentLoaded', function() {
     // Get the element with the class 'scroll-item2'

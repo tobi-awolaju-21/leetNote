@@ -1,0 +1,98 @@
+
+  /*at all*/
+  body {
+    background-color: rgb(255, 255, 255);
+    padding: 0px;
+    margin: 0px;
+   }
+
+.tipBar {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.064); /* Adjust the shadow as needed */    
+    width: 100vw;
+    height:70px;
+    z-index: 1; /* Ensure it's above other content */
+     
+  }
+
+  .user{
+    margin-right: 20px;
+    width:30px;
+    height:30px;
+    margin-top:17px;
+  }
+
+/*at index*/
+  .peopleCourses{
+    background-color:  rgb(255, 255, 255);
+    width:100vw;
+    height: calc(100vh - 270px);
+    margin-top: 30px;
+  }
+
+/*at all*/
+h2{
+    margin: 0px;
+    padding-top: 8px;
+    padding-left: 8px;
+    font-weight: 400;
+  }
+  /*at all*/
+  h3{
+    padding-right:20px;
+    margin: 0px;
+    font-weight: 200;
+    color: rgb(208, 208, 208);
+  }
+  h1{
+    font-weight: 400;
+    padding:0px;
+    margin:0px; 
+  }
+  h4{
+    font-weight: 200; 
+    padding:0px;
+    margin:0px; 
+  }
+
+
+.scroll-container {
+        width: 100vw;
+        height: calc(100vh - 270px);
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+   /* Styles for the progress bar container */
+    .progress-container {
+      width: 95%;/* Adjust the width as needed */
+      background-color: #ffe7a0; /* Amber background color */
+      border-radius: 10px; /* Rounded corners */
+      overflow: hidden;
+      margin-top:10px;
+      height:12px;
+    }
+
+    /* Styles for the progress bar filler */
+    .progress-filler {
+      height: 12px; /* Adjust the height as needed */
+      background-color: rgb(255, 204, 0); /* Orange filling color */
+      border-radius: 10px; /* Rounded corners */
+      transition: width 0.3s ease-in-out; /* Add a smooth transition effect */
+    }
+
+.player{
+  background-color:  rgba(103, 164,113, 1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.17); 
+  z-index: 1;
+  height:250px;
+  width:92vw;
+  margin: 10px;
+  margin-bottom: 50px;
+  margin-top:50px;
+}
+
