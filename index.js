@@ -67,13 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-  // Function to handle Google sign-in
-  function  signInWithGoogle(){
-
-
-    const googleProvider = new GoogleAuthProvider();
-    
+   document.querySelector('img').onclick = function() {
+    // Define the signInWithGoogle function here
+    function signInWithGoogle() {
+      // Implement the Google sign-in logic here
+      const googleProvider = new GoogleAuthProvider();
     const signInWithGoogle = async () => {
       try {
         const result = await signInWithPopup(auth, googleProvider);
@@ -83,6 +81,9 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Error signing in with Google:', error);
       }
     };
-    
-      }
-    
+    }
+  
+    // Call the signInWithGoogle function
+    signInWithGoogle();
+  };
+      
