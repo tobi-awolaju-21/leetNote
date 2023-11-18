@@ -19,7 +19,20 @@
    const app = initializeApp(firebaseConfig);
    const auth = getAuth(app);
 
-
+   function signInWithGoogle() {
+    console.log("trying")
+    // Implement the Google sign-in logic here
+    const googleProvider = new GoogleAuthProvider();
+  const signInWithGoogle = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+      console.log('User signed in:', user);
+    } catch (error) {
+      console.error('Error signing in with Google:', error);
+    }
+  };
+  }
       
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -31,20 +44,7 @@
 
       
     // Call the signInWithGoogle function
-    function signInWithGoogle() {
-      console.log("trying")
-      // Implement the Google sign-in logic here
-      const googleProvider = new GoogleAuthProvider();
-    const signInWithGoogle = async () => {
-      try {
-        const result = await signInWithPopup(auth, googleProvider);
-        const user = result.user;
-        console.log('User signed in:', user);
-      } catch (error) {
-        console.error('Error signing in with Google:', error);
-      }
-    };
-    }
+    
     signInWithGoogle()
 
 

@@ -43,8 +43,8 @@
 .scroll-item {
         display: inline-block;
         width: 150px; /* Adjust the width of each square image as needed */
-        background-color:  rgba(236, 239, 194, 0.82);border-radius: 15px;
-        color:rgb(0, 0, 0);
+        background-color:  rgba(62, 145, 87, 0.82);border-radius: 15px;
+        color:rgb(255, 255, 255);
         padding-left:15px;
         height: 150px;
         margin: 10px;
