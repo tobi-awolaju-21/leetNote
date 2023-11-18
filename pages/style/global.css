@@ -84,12 +84,12 @@ h2{ font-size: 20px;
       border-radius: 10px; /* Rounded corners */
       overflow: hidden;
       margin-top:10px;
-      height:12px;
+      height:10px;
     }
 
     /* Styles for the progress bar filler */
     .progress-filler {
-      height: 12px; /* Adjust the height as needed */
+      height: 10px; /* Adjust the height as needed */
       background-color: rgb(255, 204, 0); /* Orange filling color */
       border-radius: 10px; /* Rounded corners */
       transition: width 0.3s ease-in-out; /* Add a smooth transition effect */
