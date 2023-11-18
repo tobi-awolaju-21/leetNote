@@ -1,5 +1,9 @@
 
   /*at all*/
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Make the scrollbar track transparent */
+  }
+  
   body {
     background-color: rgb(255, 255, 255);
     padding: 0px;
