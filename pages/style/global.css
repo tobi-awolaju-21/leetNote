@@ -3,6 +3,10 @@
   ::-webkit-scrollbar-track {
     background-color: transparent; /* Make the scrollbar track transparent */
   }
+  html {
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+  }
   
   body {
     background-color: rgb(255, 255, 255);
