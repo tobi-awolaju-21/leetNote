@@ -39,21 +39,9 @@
   
     // Add a click event listener to the element
     scrollItem.addEventListener('click', function() {
-
-      
+  
     // Call the signInWithGoogle function
-    
     signInWithGoogle()
-//
-
-
-
-
-
-
-
-
-
     }); 
   });
 
