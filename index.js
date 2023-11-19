@@ -163,11 +163,11 @@ fetch(jsonUrl)
     // Loop through each key in the JSON data
     Object.keys(jsonData).forEach(function (courseKey) {
       // Create a new div element
-      var newDiv = document.createElement("div");
-      newDiv.className = "scroll-item2";
+      var newDiv2 = document.createElement("div");
+      newDiv2.className = "scroll-item2";
 
       // Set the content of the new div
-      newDiv.innerHTML = `
+      newDiv2.innerHTML = `
         <h2>${courseKey}</h2>
         <div style="display:flex;">
           <h3>9 contributors</h3>
@@ -184,8 +184,23 @@ fetch(jsonUrl)
   </div>
       `;
 
+ 
+  function redirectToNotes2(clickedCourseKey) {
+    console.log("display");
+
+    // Encode the clickedCourseKey value for URL
+    var encodedCourseKey = encodeURIComponent(clickedCourseKey);
+
+    // Redirect to notes.html with the courseKey added to the URL
+    window.location.href = 'pages/notes.html?courseKey=' + encodedCourseKey;
+  }
+
+  newDiv2.addEventListener("click", function() {
+    // Pass the courseKey to the redirectToNotes function
+    redirectToNotes2(courseKey);
+  });
       // Append the new div to the parent element
-      peopleCoursesElement.appendChild(newDiv);
+      peopleCoursesElement.appendChild(newDiv2);
     });
   })
   .catch(error => {
