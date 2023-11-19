@@ -89,3 +89,55 @@ document.addEventListener('DOMContentLoaded', function() {
   }); 
 });
 
+
+
+
+
+
+
+
+
+
+// load courses
+// URL of the JSON data
+var jsonUrl = "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses.json";
+
+// Get the parent element by its class
+var peopleCoursesElement = document.querySelector(".peopleCourses");
+
+// Fetch the JSON data
+fetch(jsonUrl)
+  .then(response => {
+    // Check if the response status is OK (200)
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    // Parse the JSON from the response
+    return response.json();
+  })
+  .then(jsonData => {
+    // Now you can work with the JSON data
+    console.log(jsonData);
+
+    // Loop through each key in the JSON data
+    Object.keys(jsonData).forEach(function (courseKey) {
+      // Create a new div element
+      var newDiv = document.createElement("div");
+      newDiv.className = "scroll-item2";
+
+      // Set the content of the new div
+      newDiv.innerHTML = `
+        <h2>${courseKey}</h2>
+        <div style="display:flex;">
+          <h3>9 contributors</h3>
+          <h3>60/150</h3>
+        </div>
+      `;
+
+      // Append the new div to the parent element
+      peopleCoursesElement.appendChild(newDiv);
+    });
+  })
+  .catch(error => {
+    console.error('Error fetching JSON:', error);
+  });
