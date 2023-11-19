@@ -69,44 +69,46 @@ fetch(jsonUrl)
     // Now you can work with the JSON data
     console.log(jsonData);
 
-    // Loop through each key in the JSON data
-    Object.keys(jsonData).forEach(function (courseKey) {
-      // Create a new div element
-      var newDiv = document.createElement("div");
-      newDiv.className = "scroll-item";
-     
 
-      // Set the content of the new div
-      newDiv.innerHTML = `
-       
-      <div class="status">
-    Live
-</div>
-<div class="status2">
-    <h1>${courseKey}</h1>
-    <h4>6:00 - 6:30</h4>
-</div>
-      `;
+   // ...
 
+// Loop through each key in the JSON data
+Object.keys(jsonData).forEach(function (courseKey) {
+  // Create a new div element
+  var newDiv = document.createElement("div");
+  newDiv.className = "scroll-item";
 
+  // Set the content of the new div
+  newDiv.innerHTML = `
+    <div class="status">
+      Live
+    </div>
+    <div class="status2">
+      <h1>${courseKey}</h1>
+      <h4>6:00 - 6:30</h4>
+    </div>
+  `;
 
+  function redirectToNotes(clickedCourseKey) {
+    console.log("display");
 
+    // Encode the clickedCourseKey value for URL
+    var encodedCourseKey = encodeURIComponent(clickedCourseKey);
 
-      function redirectToNotes() {
-        console.log("display");
-        // Get the value of courseKey
-        var courseKey = document.querySelector('.status2 h1').innerText;
-    
-        // Encode the courseKey value for URL
-        var encodedCourseKey = encodeURIComponent(courseKey);
-    
-        // Redirect to notes.html with the courseKey added to the URL
-        window.location.href = 'pages/leetspace.html?courseKey=' + encodedCourseKey;
-    }
-      newDiv.addEventListener("click", redirectToNotes);
-      // Append the new div to the parent element
-      peopleSpacesElement.appendChild(newDiv);
-    });
+    // Redirect to notes.html with the courseKey added to the URL
+    window.location.href = 'pages/leetspace.html?courseKey=' + encodedCourseKey;
+  }
+
+  newDiv.addEventListener("click", function() {
+    // Pass the courseKey to the redirectToNotes function
+    redirectToNotes(courseKey);
+  });
+
+  // Append the new div to the parent element
+  peopleSpacesElement.appendChild(newDiv);
+});
+
+// ...
   })
   .catch(error => {
     console.error('Error fetching JSON:', error);
@@ -136,7 +138,7 @@ fetch(jsonUrl)
 
 
 
-  
+
   // load courses
 // URL of the JSON data
 var jsonUrl = "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses.json";
