@@ -88,6 +88,53 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+ 
+// load Spaces 
+// URL of the JSON data
+var jsonUrl = "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses.json";
+
+// Get the parent element by its class
+var peopleSpacesElement = document.querySelector(".scroll-container");
+
+// Fetch the JSON data
+fetch(jsonUrl)
+  .then(response => {
+    // Check if the response status is OK (200)
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    // Parse the JSON from the response
+    return response.json();
+  })
+  .then(jsonData => {
+    // Now you can work with the JSON data
+    console.log(jsonData);
+
+    // Loop through each key in the JSON data
+    Object.keys(jsonData).forEach(function (courseKey) {
+      // Create a new div element
+      var newDiv = document.createElement("div");
+      newDiv.className = "scroll-item";
+
+      // Set the content of the new div
+      newDiv.innerHTML = `
+       
+        <div class = "status">
+         Live
+        </div>
+        <div class="status2">
+            <h1>${courseKey}</h1>
+            <h4>6:00 -6:30</h4>
+        </div>
+      `;
+
+      // Append the new div to the parent element
+      peopleSpacesElement.appendChild(newDiv);
+    });
+  })
+  .catch(error => {
+    console.error('Error fetching JSON:', error);
+  });
 
 
 
@@ -96,7 +143,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// load courses
+
+
+
+
+
+
+
+  // load courses
 // URL of the JSON data
 var jsonUrl = "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses.json";
 
@@ -148,3 +202,12 @@ fetch(jsonUrl)
   .catch(error => {
     console.error('Error fetching JSON:', error);
   });
+
+
+
+
+
+
+
+
+
