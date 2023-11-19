@@ -135,7 +135,9 @@ fetch(jsonUrl)
 <!-- Progress bar container -->
   <div class="progress-container">
     <!-- Progress bar filler -->
-    <div class="progress-filler" style="width: 50%;"></div>
+    <div class="progress-filler" style="width: 50%;">
+
+</div>
   </div>
       `;
 
