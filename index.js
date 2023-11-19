@@ -1,6 +1,4 @@
-
-
-   // Import the functions you need from the SDKs you need
+// Import the functions you need from the SDKs you need
    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
    import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
    
@@ -132,6 +130,13 @@ fetch(jsonUrl)
           <h3>9 contributors</h3>
           <h3>60/150</h3>
         </div>
+
+
+<!-- Progress bar container -->
+  <div class="progress-container">
+    <!-- Progress bar filler -->
+    <div class="progress-filler" style="width: 50%;"></div>
+  </div>
       `;
 
       // Append the new div to the parent element
