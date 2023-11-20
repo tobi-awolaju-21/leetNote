@@ -98,7 +98,10 @@ metadataArray.forEach(item => {
                     ${questionItem.solution}
                 </div>
             `;
-            peopleCoursesElement.innerHTML += questionTileHTML;
+
+            const questionDiv = document.createElement('div');
+            questionDiv.innerHTML += questionTileHTML;
+            peopleCoursesElement.appendChild(questionDiv);
         });
     }
 });
