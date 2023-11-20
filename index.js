@@ -207,5 +207,3 @@ fetch(jsonUrl)
     console.error('Error fetching JSON:', error);
   });
 
-
-
