@@ -50,7 +50,7 @@
  
 // load Spaces 
 // URL of the JSON data
-var jsonUrl = "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses.json";
+var jsonUrl = "https://leetnote-7cfce-default-rtdb.firebaseio.com/classroom.json";
 
 // Get the parent element by its class
 var peopleSpacesElement = document.querySelector(".scroll-container");
