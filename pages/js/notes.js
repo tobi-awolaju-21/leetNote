@@ -88,15 +88,17 @@ metadataArray.forEach(item => {
     if (item.question) {
         const questionsArray = JSON.parse(item.question);
         questionsArray.forEach(questionItem => {
-            const questionDiv = document.createElement('div');
-            questionDiv.className = 'question';
-            questionDiv.innerHTML = questionItem.question;
-            peopleCoursesElement.appendChild(questionDiv);
-
-            const solutionDiv = document.createElement('div');
-            solutionDiv.className = 'solution';
-            solutionDiv.innerHTML = questionItem.solution;
-            peopleCoursesElement.appendChild(solutionDiv);
+            // Using the provided HTML snippet for questions
+            const questionTileHTML = `
+                <div class="question-tile">
+                    <p>${questionItem.question}</p>
+                    <input class="submit-button" type="file" id="imageInput" accept="image/*" style="display: block;">
+                </div>
+                <div class="solution">
+                    ${questionItem.solution}
+                </div>
+            `;
+            peopleCoursesElement.innerHTML += questionTileHTML;
         });
     }
 });
