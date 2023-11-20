@@ -32,12 +32,12 @@ function getParameterValue(parameterName) {
 // Get the value of the courseKey parameter
 const courseKey = getParameterValue('courseKey');
 // Log the value to the console (you can use it as needed)
-console.log(courseKey);
+
 
 
 var jsonUrl = "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses/" + courseKey + ".json"
 
-
+console.log(jsonUrl);
 
 // Get the parent element by its class
 var peopleCoursesElement = document.querySelector(".peopleCourses");
@@ -53,8 +53,58 @@ fetch(jsonUrl)
     return response.json();
   })
   .then(jsonData => {
+// start of magic
 
 
+
+
+
+
+const metadataArray = JSON.parse(jsonData.metadata);
+
+metadataArray.forEach(item => {
+    // Creating div for note
+    if (item.note) {
+        const noteDiv = document.createElement('div');
+        noteDiv.className = 'note-tile';
+        noteDiv.innerHTML = item.note;
+        peopleCoursesElement.appendChild(noteDiv);
+    }
+
+   
+
+
+    // Creating div for outline
+    if (item.outline) {
+        const outlineDiv = document.createElement('div');
+        outlineDiv.className = 'player';
+        outlineDiv.innerHTML = item.outline;
+        peopleCoursesElement.appendChild(outlineDiv);
+    }
+
+    
+
+    // Creating divs for questions and solutions
+    if (item.question) {
+        const questionsArray = JSON.parse(item.question);
+        questionsArray.forEach(questionItem => {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'question';
+            questionDiv.innerHTML = questionItem.question;
+            peopleCoursesElement.appendChild(questionDiv);
+
+            const solutionDiv = document.createElement('div');
+            solutionDiv.className = 'solution';
+            solutionDiv.innerHTML = questionItem.solution;
+            peopleCoursesElement.appendChild(solutionDiv);
+        });
+    }
+});
+
+
+
+
+//end of magic
 console.log("deyplay");
 
    })
