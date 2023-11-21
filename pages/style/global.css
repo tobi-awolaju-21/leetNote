@@ -96,13 +96,13 @@ h2{ font-size: 20px;
     }
 
 .player{
-  background-color:  rgb(0, 0, 0);
+  background-color:  rgb(255, 255, 255);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.17); 
   z-index: 1;
   height:250px;
   width:92vw;
   margin: 10px;
-  margin-bottom: 50px;
-  margin-top:50px;
+  margin-bottom: 20px;
+  margin-top:10px;
 }
 
