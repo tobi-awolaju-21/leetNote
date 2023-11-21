@@ -57,7 +57,7 @@ fetch(jsonUrl)
         outlineDiv.innerHTML = item.outline;
         peopleCoursesElement.appendChild(outlineDiv);
       }
-
+// people are cooking gann o
      // Creating div for video
 if (item.video) {
   const noteDiv = document.createElement("div");
