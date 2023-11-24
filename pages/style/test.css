@@ -21,6 +21,17 @@
       margin: 10px;
  
   }
+  
+  .solution{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    border-radius: 0px;
+    margin:15px;
+    margin-bottom:30px;
+    position:relative;
+    top:-15px;
+    box-shadow: 0px 4px 8px rgba(102, 102, 102, 0.17); 
+    }
 .submit-button {
     background-color: rgba(236, 239, 194, 1);
     border-radius:50px;
