@@ -42,7 +42,7 @@
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 30px;
+  border-radius: 10px;
   height:25px;
 }
 
@@ -51,9 +51,9 @@
   margin-left: 5px;
   margin-right: 0px;
   padding: 5px;
-  background-color: rgba(62, 145, 87, 0.82);
+  background-color: #1f883d;
   color: #ffffff;
-  border-radius: 30px;
+  border-radius: 10px;
   width:75px;
   border: none;
   cursor: pointer;
