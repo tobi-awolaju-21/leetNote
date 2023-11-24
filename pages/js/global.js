@@ -49,23 +49,5 @@ const signInWithGoogle = async () => {
   });
 
 
-// Assuming you have already initialized Firebase and obtained the 'auth' object
-
-// Function to check if a user is signed in
-function checkIfUserSignedIn() {
-    const user = auth.currentUser;
-  
-    if (user) {
-      // User is signed in
-      console.log('User is signed in:', user);
-      // You can perform additional actions for a signed-in user here
-    } else {
-      // No user is signed in
-      console.log('No user is signed in');
-      // You can redirect to a sign-in page or perform other actions for a non-signed-in user
-    }
-  }
-  
-  // Call the function to check user authentication status
-  checkIfUserSignedIn();
+ 
   
