@@ -53,6 +53,7 @@ Object.keys(jsonData).forEach(function (courseKey) {
   newDiv.addEventListener("click", function() {
     // Pass the courseKey to the redirectToNotes function
     redirectToNotes(courseKey);
+    checkIfUserSignedIn();
   });
 
   // Append the new div to the parent element
