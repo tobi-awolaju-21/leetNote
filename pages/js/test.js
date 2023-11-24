@@ -38,30 +38,6 @@ fetch(jsonUrl)
     const metadataArray = JSON.parse(jsonData.metadata);
 
     metadataArray.forEach((item) => {
-      // Creating div for outline
-      if (item.outline) {
-        const outlineDiv = document.createElement("div");
-        outlineDiv.className = "note-tile";
-        outlineDiv.innerHTML = item.outline;
-        peopleCoursesElement.appendChild(outlineDiv);
-      }
-// people are cooking gann o
-     // Creating div for video
-if (item.video) {
-  const noteDiv = document.createElement("div");
-  noteDiv.className = "player";
-  noteDiv.innerHTML = `<iframe src="${item.video}" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>`;
-  peopleCoursesElement.appendChild(noteDiv);
-}
-
-      // Creating div for note
-      if (item.note) {
-        const noteDiv = document.createElement("div");
-        noteDiv.className = "note-tile";
-        noteDiv.innerHTML = item.note;
-        peopleCoursesElement.appendChild(noteDiv);
-      }
-
       // Creating divs for questions and solutions
       if (item.question) {
         const questionsArray = JSON.parse(item.question);
