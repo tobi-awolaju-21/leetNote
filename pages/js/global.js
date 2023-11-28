@@ -3,12 +3,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebas
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 
 
-//create email element 
-const emailElement = document.createElement('div');
-emailElement.className = 'email';
-emailElement.style.width = '0';
-// Append the text element to the document body or another container
-document.body.appendChild(emailElement);
 
 
 
