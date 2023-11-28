@@ -7,16 +7,12 @@ function getParameterValue(parameterName) {
   return urlSearchParams.get(parameterName);
 }
 // Get the value of the courseKey parameter
-
 const courseKey = getParameterValue("courseKey");
 const email = getParameterValue("email");
-
 // Log the value to the console (you can use it as needed)
-
 document.addEventListener("DOMContentLoaded", function () {
   // Get the element with the class 'scroll-item2'
   var scrollItem = document.querySelector(".notefab");
-
   // Add a click event listener to the element
   scrollItem.addEventListener("click", function () {
     // Redirect to 'notes.html' when the element is clicked

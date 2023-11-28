@@ -134,7 +134,6 @@ fetch(jsonUrl)
 </div>
   </div>
       `;
-
       function redirectToNotes2(clickedCourseKey) {
         console.log("display");
         // Encode the clickedCourseKey value for URL
@@ -148,7 +147,6 @@ fetch(jsonUrl)
         window.location.href =
           "pages/notes.html?courseKey=" + encodedCourseKey + "&email=" + email;
       }
-
       newDiv2.addEventListener("click", function () {
         // Pass the courseKey to the redirectToNotes function
         redirectToNotes2(courseKey);
