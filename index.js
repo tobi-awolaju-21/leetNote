@@ -1,14 +1,14 @@
-
-// load Spaces 
+// load Spaces
 // URL of the JSON data
-var jsonUrl = "https://leetnote-7cfce-default-rtdb.firebaseio.com/classroom.json";
+var jsonUrl =
+  "https://leetnote-7cfce-default-rtdb.firebaseio.com/classroom.json";
 
 // Get the parent element by its class
 var peopleSpacesElement = document.querySelector(".scroll-container");
 
 // Fetch the JSON data
 fetch(jsonUrl)
-  .then(response => {
+  .then((response) => {
     // Check if the response status is OK (200)
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -16,21 +16,20 @@ fetch(jsonUrl)
     // Parse the JSON from the response
     return response.json();
   })
-  .then(jsonData => {
+  .then((jsonData) => {
     // Now you can work with the JSON data
     console.log(jsonData);
 
+    // ...
 
-   // ...
+    // Loop through each key in the JSON data
+    Object.keys(jsonData).forEach(function (courseKey) {
+      // Create a new div element
+      var newDiv = document.createElement("div");
+      newDiv.className = "scroll-item";
 
-// Loop through each key in the JSON data
-Object.keys(jsonData).forEach(function (courseKey) {
-  // Create a new div element
-  var newDiv = document.createElement("div");
-  newDiv.className = "scroll-item";
-
-  // Set the content of the new div
-  newDiv.innerHTML = `
+      // Set the content of the new div
+      newDiv.innerHTML = `
     <div class="status">
       Live
     </div>
@@ -40,76 +39,58 @@ Object.keys(jsonData).forEach(function (courseKey) {
     </div>
   `;
 
-  function redirectToNotes(clickedCourseKey) {
-    console.log("display");
+      function redirectToNotes(clickedCourseKey) {
+        console.log("display");
 
-    // Encode the clickedCourseKey value for URL
-    var encodedCourseKey = encodeURIComponent(clickedCourseKey);
-    
-    // add the email too 
-    var email = emailElement.innerText;
-    //rrrr
-    // Redirect to notes.html with the courseKey and email added to the URL
-    window.location.href = 'pages/leetspace.html?courseKey=' + encodedCourseKey + '&email=' + email;
-}
+        // Encode the clickedCourseKey value for URL
+        var encodedCourseKey = encodeURIComponent(clickedCourseKey);
 
-function redirectToNotes(clickedCourseKey) {
-  console.log("display");
+        // add the email too
+        var email = emailElement.innerText;
+        //rrrr
+        // Redirect to notes.html with the courseKey and email added to the URL
+        window.location.href =
+          "pages/leetspace.html?courseKey=" +
+          encodedCourseKey +
+          "&email=" +
+          email;
+      }
 
-  // Encode the clickedCourseKey value for URL
-  var encodedCourseKey = encodeURIComponent(clickedCourseKey);
-  
-  // add the email too rest my G
-  const emailElement = document.getElementsByClassName('email')[0];
-  var email = emailElement.innerText;
-  
-  // Redirect to notes.html with the courseKey and email added to the URL
-  window.location.href = 'pages/leetspace.html?courseKey=' + encodedCourseKey + '&email=' + email;
-}
+      function redirectToNotes(clickedCourseKey) {
+        console.log("display");
 
+        // Encode the clickedCourseKey value for URL
+        var encodedCourseKey = encodeURIComponent(clickedCourseKey);
 
-  newDiv.addEventListener("click", function() {
-    // Pass the courseKey to the redirectToNotes function
-    redirectToNotes(courseKey);
-    checkIfUserSignedIn();
-  });
+        // add the email too rest my G
+        const emailElement = document.getElementsByClassName("email")[0];
+        var email = emailElement.innerText;
 
-  // Append the new div to the parent element
-  peopleSpacesElement.appendChild(newDiv);
-});
+        // Redirect to notes.html with the courseKey and email added to the URL
+        window.location.href =
+          "pages/leetspace.html?courseKey=" +
+          encodedCourseKey +
+          "&email=" +
+          email;
+      }
 
-// ...
+      newDiv.addEventListener("click", function () {
+        // Pass the courseKey to the redirectToNotes function
+        redirectToNotes(courseKey);
+        checkIfUserSignedIn();
+      });
+
+      // Append the new div to the parent element
+      peopleSpacesElement.appendChild(newDiv);
+    });
+
+    // ...
   })
-  .catch(error => {
-    console.error('Error fetching JSON:', error);
+  .catch((error) => {
+    console.error("Error fetching JSON:", error);
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // load courses
+// load courses
 // URL of the JSON data
 var jsonUrl = "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses.json";
 
@@ -118,7 +99,7 @@ var peopleCoursesElement = document.querySelector(".peopleCourses");
 
 // Fetch the JSON data
 fetch(jsonUrl)
-  .then(response => {
+  .then((response) => {
     // Check if the response status is OK (200)
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -126,7 +107,7 @@ fetch(jsonUrl)
     // Parse the JSON from the response
     return response.json();
   })
-  .then(jsonData => {
+  .then((jsonData) => {
     // Now you can work with the JSON data
     console.log(jsonData);
 
@@ -154,35 +135,27 @@ fetch(jsonUrl)
   </div>
       `;
 
- 
-  function redirectToNotes2(clickedCourseKey) {
-    console.log("display");
+      function redirectToNotes2(clickedCourseKey) {
+        console.log("display");
+        // Encode the clickedCourseKey value for URL
+        var encodedCourseKey = encodeURIComponent(clickedCourseKey);
 
-    // Encode the clickedCourseKey value for URL
-    var encodedCourseKey = encodeURIComponent(clickedCourseKey);
+        // just a bunch of un need commits
+        // add the email too rest my G
+        const emailElement = document.getElementsByClassName("email")[0];
+        var email = emailElement.innerText;
+        window.location.href =
+          "pages/notes.html?courseKey=" + encodedCourseKey + "&email=" + email;
+      }
 
-
-// just a bunch of un need commits
-
-
-// add the email too rest my G
-const emailElement = document.getElementsByClassName('email')[0];
-var email = emailElement.innerText;
-
-
-window.location.href = 'pages/notes.html?courseKey=' + encodedCourseKey + '&email=' + email;
-
-  }
-
-  newDiv2.addEventListener("click", function() {
-    // Pass the courseKey to the redirectToNotes function
-    redirectToNotes2(courseKey);
-  });
+      newDiv2.addEventListener("click", function () {
+        // Pass the courseKey to the redirectToNotes function
+        redirectToNotes2(courseKey);
+      });
       // Append the new div to the parent element
       peopleCoursesElement.appendChild(newDiv2);
     });
   })
-  .catch(error => {
-    console.error('Error fetching JSON:', error);
+  .catch((error) => {
+    console.error("Error fetching JSON:", error);
   });
-
