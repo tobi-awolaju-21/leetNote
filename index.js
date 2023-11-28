@@ -60,6 +60,7 @@ function redirectToNotes(clickedCourseKey) {
   var encodedCourseKey = encodeURIComponent(clickedCourseKey);
   
   // add the email too 
+  const emailElement = document.getElementsByClassName('email');
   var email = emailElement.innerText;
   
   // Redirect to notes.html with the courseKey and email added to the URL
