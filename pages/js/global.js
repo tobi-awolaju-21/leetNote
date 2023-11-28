@@ -28,7 +28,7 @@ const signInWithGoogle = async () => {
 
     // Log the user object
     console.log('User signed in:', user);
-
+    console.log('Loading image  too');
     // Get the user's photo URL
     const photoURL = user.photoURL;
 
