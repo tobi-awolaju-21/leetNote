@@ -30,8 +30,18 @@
 
 <!--Landing page -->
 <div class=" landing">
-
 </div>
+<script>
+    const emailElement = document.getElementsByClassName("email")[0];
+        var email = emailElement.innerText;
+        if(email==""){
+          const peopleSpacesElement = document.querySelector('.peopleSpaces');
+          peopleSpacesElement.style.display = 'none';
+
+          const peopleCoursesElement = document.querySelector('.peopleCourses');
+          peopleCoursesElement.style.display = 'none';
+        }
+</script>
 
 <div class="email" style="color:#fff"></div>
     <!-- popele spaces-->
