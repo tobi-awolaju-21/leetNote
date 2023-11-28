@@ -48,7 +48,7 @@ Object.keys(jsonData).forEach(function (courseKey) {
     
     // add the email too 
     var email = emailElement.innerText;
-    
+    //rrrr
     // Redirect to notes.html with the courseKey and email added to the URL
     window.location.href = 'pages/leetspace.html?courseKey=' + encodedCourseKey + '&email=' + email;
 }
