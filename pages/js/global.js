@@ -2,6 +2,15 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 
+
+
+//create email element 
+const emailElement = document.createElement('div');
+// Append the text element to the document body or another container
+document.body.appendChild(emailElement);
+
+
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB8-0G6-iS8Ep9fwOl6yBlGuUF0DxS0wdo",
@@ -32,6 +41,8 @@ const signInWithGoogle = async () => {
 
     // Get the user's photo URL
     const photoURL = user.photoURL;
+    // Get the user's photo URL
+    const emailUser = user.email;
 
     // Change the src attribute of the image with class name 'user'
     const userImage = document.querySelector('.user');
@@ -43,6 +54,8 @@ const signInWithGoogle = async () => {
     const emailElement = document.createElement('div');
     emailElement.className = 'email';
     emailElement.style.width = '0';
+    // Set the text content of the emailElement to "hello world"
+    emailElement.textContent = emailUser;
 
     // Append the text element to the document body or another container
     document.body.appendChild(emailElement);
