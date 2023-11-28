@@ -28,10 +28,7 @@
 </div>
 
 
-<!--Landing page -->
-<div class=" landing">
 
-</div>
 
     <!-- popele spaces-->
 <div  class = peopleSpaces>
@@ -61,6 +58,11 @@
 
 
 
+
+    <!--Landing page -->
+<div class=" landing">
+<h1>. Login to Access Study materials </h1>
+</div>
     <div class="email" style="color:#fff"></div>
     <script>
       const emailElement = document.getElementsByClassName("email")[0];
@@ -70,6 +72,9 @@
             peopleSpacesElement.style.display = 'none';
     
             const peopleCoursesElement = document.querySelector('.peopleCourses');
+            peopleCoursesElement.style.display = 'none';
+          }else{
+            const landing = document.querySelector('.landing');
             peopleCoursesElement.style.display = 'none';
           }
     </script>
