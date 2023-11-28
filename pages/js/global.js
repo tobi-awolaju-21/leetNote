@@ -32,6 +32,15 @@ const signInWithGoogle = async () => {
 
     // Log the user object
     console.log('User signed in:', user);
+
+    const peopleSpacesElement = document.querySelector('.peopleSpaces');
+    peopleSpacesElement.style.display = 'block';
+    const peopleCoursesElement = document.querySelector('.peopleCourses');
+    peopleCoursesElement.style.display = 'block';
+    const fab = document.querySelector('.fab');
+    fab.style.display = 'flex';
+
+
     console.log('Loading image too');
 
     // Get the user's photo URL
