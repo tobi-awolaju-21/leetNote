@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var scrollItem = document.querySelector(".notefab");
   scrollItem.addEventListener("click", function () {
     window.location.href =
-      "pages/test.html?courseKey=" + courseKey + "&email=" + email;
+      "./test.html?courseKey=" + courseKey + "&email=" + email;
   });
 });
 var jsonUrl =
