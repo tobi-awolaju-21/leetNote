@@ -37,7 +37,7 @@ const signInWithGoogle = async () => {
     const userImage = document.querySelector('.user');
     if (userImage) {
       userImage.src = photoURL;
-    }
+    }//
 
     // Create a text element with class name 'email' and set its width to zero
     const emailElement = document.createElement('div');
