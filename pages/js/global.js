@@ -21,16 +21,27 @@ const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 
-
 const signInWithGoogle = async () => {
   try {
     const result = await signInWithPopup(auth, googleProvider);
     const user = result.user;
+
+    // Log the user object
     console.log('User signed in:', user);
+
+    // Get the user's photo URL
+    const photoURL = user.photoURL;
+
+    // Change the src attribute of the image with class name 'user'
+    const userImage = document.querySelector('.user');
+    if (userImage) {
+      userImage.src = photoURL;
+    }
   } catch (error) {
     console.error('Error signing in with Google:', error);
   }
 };
+
 
 // Now you can call signInWithGoogle when you want to trigger the Google sign-in.
 
