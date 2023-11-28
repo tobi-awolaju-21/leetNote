@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   scrollItem.addEventListener("click", function () {
     // Redirect to 'notes.html' when the element is clicked
      window.location.href =
-          "pages/test.html?courseKey=" + CourseKey + "&email=" + email;
+          "pages/test.html?courseKey=" + courseKey + "&email=" + email;
   });
 });
 
