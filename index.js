@@ -161,8 +161,17 @@ fetch(jsonUrl)
     // Encode the clickedCourseKey value for URL
     var encodedCourseKey = encodeURIComponent(clickedCourseKey);
 
-    // Redirect to notes.html with the courseKey added to the URL
-    window.location.href = 'pages/notes.html?courseKey=' + encodedCourseKey;
+
+
+
+
+// add the email too rest my G
+const emailElement = document.getElementsByClassName('email')[0];
+var email = emailElement.innerText;
+
+
+window.location.href = 'pages/notes.html?courseKey=' + encodedCourseKey + '&email=' + email;
+
   }
 
   newDiv2.addEventListener("click", function() {
