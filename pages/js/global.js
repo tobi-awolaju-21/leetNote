@@ -6,6 +6,8 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstati
 
 //create email element 
 const emailElement = document.createElement('div');
+emailElement.className = 'email';
+emailElement.style.width = '0';
 // Append the text element to the document body or another container
 document.body.appendChild(emailElement);
 
@@ -50,16 +52,10 @@ const signInWithGoogle = async () => {
       userImage.src = photoURL;
     }//
 
-    // Create a text element with class name 'email' and set its width to zero
-    const emailElement = document.createElement('div');
-    emailElement.className = 'email';
-    emailElement.style.width = '0';
+  
+   
     // Set the text content of the emailElement to "hello world"
     emailElement.textContent = emailUser;
-
-    // Append the text element to the document body or another container
-    document.body.appendChild(emailElement);
-
     // Log the value of the 'email' element
     console.log('Email element value:', emailElement.innerText);
 
