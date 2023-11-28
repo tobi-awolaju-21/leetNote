@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add a click event listener to the element
   scrollItem.addEventListener("click", function () {
     // Redirect to 'notes.html' when the element is clicked
-    window.location.href = './test.html?courseKey=' + courseKey;
+     window.location.href =
+          "pages/test.html?courseKey=" + CourseKey + "&email=" + email;
   });
 });
 
