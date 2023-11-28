@@ -45,9 +45,10 @@ Object.keys(jsonData).forEach(function (courseKey) {
 
     // Encode the clickedCourseKey value for URL
     var encodedCourseKey = encodeURIComponent(clickedCourseKey);
-
+ // add the email too 
+    var email = emailElement.innerText;
     // Redirect to notes.html with the courseKey added to the URL
-    window.location.href = 'pages/leetspace.html?courseKey=' + encodedCourseKey;
+    window.location.href = 'pages/leetspace.html?courseKey=' + encodedCourseKey+"?email="+email;
   }
 
   newDiv.addEventListener("click", function() {

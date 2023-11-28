@@ -28,7 +28,8 @@ const signInWithGoogle = async () => {
 
     // Log the user object
     console.log('User signed in:', user);
-    console.log('Loading image  too');
+    console.log('Loading image too');
+
     // Get the user's photo URL
     const photoURL = user.photoURL;
 
@@ -37,10 +38,23 @@ const signInWithGoogle = async () => {
     if (userImage) {
       userImage.src = photoURL;
     }
+
+    // Create a text element with class name 'email' and set its width to zero
+    const emailElement = document.createElement('div');
+    emailElement.className = 'email';
+    emailElement.style.width = '0';
+
+    // Append the text element to the document body or another container
+    document.body.appendChild(emailElement);
+
+    // Log the value of the 'email' element
+    console.log('Email element value:', emailElement.innerText);
+
   } catch (error) {
     console.error('Error signing in with Google:', error);
   }
 };
+
 
 
 // Now you can call signInWithGoogle when you want to trigger the Google sign-in.
