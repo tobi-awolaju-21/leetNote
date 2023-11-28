@@ -50,7 +50,7 @@ const signInWithGoogle = async () => {
     const userImage = document.querySelector('.user');
     if (userImage) {
       userImage.src = photoURL;
-    }//
+    }
 
   
    
