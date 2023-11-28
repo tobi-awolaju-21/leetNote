@@ -162,7 +162,7 @@ fetch(jsonUrl)
     var encodedCourseKey = encodeURIComponent(clickedCourseKey);
 
 
-
+// just a bunch of un need commits
 
 
 // add the email too rest my G
