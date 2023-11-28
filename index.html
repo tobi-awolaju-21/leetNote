@@ -63,11 +63,12 @@
 <div class=" landing">
 <h1>. Login to Access Study materials </h1>
 </div>
+
     <div class="email" style="color:#fff"></div>
     <script>
-      const emailElement = document.getElementsByClassName("email")[0];
+      var emailElement = document.getElementsByClassName("email")[0];
           var email = emailElement.innerText;
-          if(email==""){
+          if(email===""){
             const peopleSpacesElement = document.querySelector('.peopleSpaces');
             peopleSpacesElement.style.display = 'none';
     
