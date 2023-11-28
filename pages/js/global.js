@@ -33,6 +33,7 @@ const signInWithGoogle = async () => {
     // Log the user object
     console.log('User signed in:', user);
 
+    // please work mannnnn
     const peopleSpacesElement = document.querySelector('.peopleSpaces');
     peopleSpacesElement.style.display = 'block';
     const peopleCoursesElement = document.querySelector('.peopleCourses');
