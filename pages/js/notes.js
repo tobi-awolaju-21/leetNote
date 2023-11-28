@@ -8,6 +8,8 @@ function getParameterValue(parameterName) {
 }
 // Get the value of the courseKey parameter
 const courseKey = getParameterValue("courseKey");
+
+const user = getParameterValue("courseKey");
 // Log the value to the console (you can use it as needed)
 
 document.addEventListener("DOMContentLoaded", function () {

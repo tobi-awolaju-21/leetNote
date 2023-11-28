@@ -139,6 +139,8 @@ h2{ font-size: 20px;
   right:20px;
 }
 
-.user{
-border-radius:50px;
+.user {
+  width: 30px; /* Replace with your image width */
+  height: 30px; /* Replace with your image height */
+  border-radius: 50%;
 }
