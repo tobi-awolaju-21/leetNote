@@ -144,6 +144,7 @@ fetch(jsonUrl)
         // add the email too rest my G
         const emailElement = document.getElementsByClassName("email")[0];
         var email = emailElement.innerText;
+//work please
         window.location.href =
           "pages/notes.html?courseKey=" + encodedCourseKey + "&email=" + email;
       }
