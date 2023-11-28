@@ -7,9 +7,10 @@ function getParameterValue(parameterName) {
   return urlSearchParams.get(parameterName);
 }
 // Get the value of the courseKey parameter
-const courseKey = getParameterValue("courseKey");
 
-const user = getParameterValue("courseKey");
+const courseKey = getParameterValue("courseKey");
+const email = getParameterValue("email");
+
 // Log the value to the console (you can use it as needed)
 
 document.addEventListener("DOMContentLoaded", function () {
