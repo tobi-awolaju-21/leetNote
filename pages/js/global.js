@@ -42,7 +42,7 @@ const signInWithGoogle = async () => {
     fab.style.display = 'flex';
     //hide landing
     const landing = document.querySelector('.landing');
-    fab.style.display = 'none'
+    landing.style.display = 'none'
 
 
     console.log('Loading image too');
