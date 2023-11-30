@@ -33,13 +33,16 @@ const signInWithGoogle = async () => {
     // Log the user object
     console.log('User signed in:', user);
 
-    // please work mannnnn
+    // show courses and space
     const peopleSpacesElement = document.querySelector('.peopleSpaces');
     peopleSpacesElement.style.display = 'block';
     const peopleCoursesElement = document.querySelector('.peopleCourses');
     peopleCoursesElement.style.display = 'block';
     const fab = document.querySelector('.fab');
     fab.style.display = 'flex';
+    //hide landing
+    const landing = document.querySelector('.landing');
+    fab.style.display = 'none'
 
 
     console.log('Loading image too');
