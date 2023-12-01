@@ -1,3 +1,7 @@
+import confetti from "https://cdn.skypack.dev/canvas-confetti";
+
+
+
 // URL of the JSON data = baseurl/ +surfix of webpage.json
 //http://127.0.0.1:5500/pages/leetspace.html?courseKey=AGE%20202
 
@@ -67,3 +71,12 @@ fetch(jsonUrl)
   .catch((error) => {
     console.error("Error fetching JSON:", error);
   });
+
+
+
+
+confetti();
+
+window.addEventListener("click", () => {
+  confetti();
+});

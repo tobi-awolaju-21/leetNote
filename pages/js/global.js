@@ -6,6 +6,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstati
 
 
 
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB8-0G6-iS8Ep9fwOl6yBlGuUF0DxS0wdo",
