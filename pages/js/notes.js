@@ -5,6 +5,10 @@ function getParameterValue(parameterName) {
 }
 const courseKey = getParameterValue("courseKey");
 const email = getParameterValue("email");
+// load pfp image
+const userImage = document.querySelector('.user');
+userImage.src = getParameterValue("img");
+
 document.addEventListener("DOMContentLoaded", function () {
   var scrollItem = document.querySelector(".notefab");
   scrollItem.addEventListener("click", function () {

@@ -10,6 +10,10 @@ function getParameterValue(parameterName) {
 }
 // Get the value of the courseKey parameter
 const courseKey = getParameterValue("courseKey");
+const email = getParameterValue("email");
+// load pfp image
+const userImage = document.querySelector('.user');
+userImage.src = getParameterValue("img");
 // Log the value to the console (you can use it as needed)
 
 var jsonUrl =
