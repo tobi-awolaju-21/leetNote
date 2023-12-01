@@ -62,7 +62,6 @@ const signInWithGoogle = async () => {
    
     // Set the text content of the emailElement to "hello world"
     const emailElement = document.getElementsByClassName('email')[0];
-
     emailElement.textContent = emailUser;
     // Log the value of the 'email' element
     console.log('Email element value:', emailElement.innerText);

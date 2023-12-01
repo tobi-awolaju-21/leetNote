@@ -22,25 +22,20 @@ var newDiv = document.createElement("div");
       <h4>6:00 - 6:30</h4>
     </div>
   `;
+
+
 function redirectToNotes(clickedCourseKey) {
 var encodedCourseKey = encodeURIComponent(clickedCourseKey);
+const emailElement = document.getElementsByClassName("email")[0];
+const imageElement = document.getElementsByClassName('user')[0];
 var email = emailElement.innerText;
+var img = imageElement.src;
+
 window.location.href =
           "pages/leetspace.html?courseKey=" +
           encodedCourseKey +
           "&email=" +
-          email;
-      }
-function redirectToNotes(clickedCourseKey) {
-        console.log("display");
-var encodedCourseKey = encodeURIComponent(clickedCourseKey);
-const emailElement = document.getElementsByClassName("email")[0];
-        var email = emailElement.innerText;
- window.location.href =
-          "pages/leetspace.html?courseKey=" +
-          encodedCourseKey +
-          "&email=" +
-          email;
+          email+"&img"+img;
       }
  newDiv.addEventListener("click", function () {
  redirectToNotes(courseKey);
@@ -85,9 +80,15 @@ var newDiv2 = document.createElement("div");
         console.log("display");
 var encodedCourseKey = encodeURIComponent(clickedCourseKey);
         const emailElement = document.getElementsByClassName("email")[0];
+        const imageElement = document.getElementsByClassName('user')[0];
         var email = emailElement.innerText;
+        var img = imageElement.src;
+
+
  window.location.href =
-          "pages/notes.html?courseKey=" + encodedCourseKey + "&email=" + email;
+          "pages/notes.html?courseKey=" + encodedCourseKey +
+          "&email=" +
+          email+"&img"+img;
       }
       newDiv2.addEventListener("click", function () {
 redirectToNotes2(courseKey);
