@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var scrollItem = document.querySelector(".notefab");
   scrollItem.addEventListener("click", function () {
     window.location.href =
-      "./test.html?courseKey=" + courseKey + "&email=" + email;
+      "./test.html?courseKey=" + courseKey + "&email=" + email+"&img"+img;
   });
 });
 var jsonUrl =
