@@ -9,6 +9,8 @@ const email = getParameterValue("email");
 const userImage = document.querySelector('.user');
 userImage.src = getParameterValue("img");
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   var scrollItem = document.querySelector(".notefab");
   scrollItem.addEventListener("click", function () {
@@ -16,8 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
       "./test.html?courseKey=" + courseKey + "&email=" + email+"&img="+img;
   });
 });
-var jsonUrl =
-  "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses/" +
+
+
+
+
+var jsonUrl = "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses/" +
   courseKey +
   ".json";
 var peopleCoursesElement = document.querySelector(".peopleCourses");
