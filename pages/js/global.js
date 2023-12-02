@@ -98,8 +98,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-
-
-
- 
   
