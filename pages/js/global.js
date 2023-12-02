@@ -104,6 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       console.log("not null img");
       // go to profile pass those parameters
+      window.location.href = ".pages/profile.html?email=" + emailElement.textContent + "&img=" + img.src;
+
       window.location.href = "./profile.html?email=" + emailElement.textContent + "&img=" + img.src;
       console.log("going to profile");
     }
