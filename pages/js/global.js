@@ -30,10 +30,8 @@ const signInWithGoogle = async () => {
   try {
     const result = await signInWithPopup(auth, googleProvider);
     const user = result.user;
-
     // Log the user object
     console.log('User signed in:', user);
-
     // show courses and space
     const peopleSpacesElement = document.querySelector('.peopleSpaces');
     peopleSpacesElement.style.display = 'block';
@@ -44,15 +42,11 @@ const signInWithGoogle = async () => {
     //hide landing
     const landing = document.querySelector('.landing');
     landing.style.display = 'none'
-
-
     console.log('Loading image too');
-
     // Get the user's photo URL
     const photoURL = user.photoURL;
     // Get the user's photo URL
     const emailUser = user.email;
-
     // Change the src attribute of the image with class name 'user'
     const userImage = document.querySelector('.user');
     if (userImage) {
@@ -84,7 +78,6 @@ const signInWithGoogle = async () => {
   
     // Add a click event listener to the element
     scrollItem.addEventListener('click', function() {
-  
     // Call the signInWithGoogle function
     signInWithGoogle()
     }); 
