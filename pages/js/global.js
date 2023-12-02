@@ -89,7 +89,8 @@ const signInWithGoogle = async () => {
     scrollItem.addEventListener('click', function() {
     // Call the signInWithGoogle function
     if(img==null){
-      signInWithGoogle()
+      signInWithGoogle();
+      console.log()
     }else{
       // go to profile pass those parameters
       window.location.href =
