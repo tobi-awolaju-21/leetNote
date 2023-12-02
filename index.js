@@ -35,7 +35,7 @@ window.location.href =
           "pages/leetspace.html?courseKey=" +
           encodedCourseKey +
           "&email=" +
-          email+"&img"+img;
+          email+"&img="+img;
       }
  newDiv.addEventListener("click", function () {
  redirectToNotes(courseKey);
@@ -88,7 +88,7 @@ var encodedCourseKey = encodeURIComponent(clickedCourseKey);
  window.location.href =
           "pages/notes.html?courseKey=" + encodedCourseKey +
           "&email=" +
-          email+"&img"+img;
+          email+"&img="+img;
       }
       newDiv2.addEventListener("click", function () {
 redirectToNotes2(courseKey);

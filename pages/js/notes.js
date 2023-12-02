@@ -5,19 +5,26 @@ function getParameterValue(parameterName) {
 }
 const courseKey = getParameterValue("courseKey");
 const email = getParameterValue("email");
+const img = getParameterValue("img");
 // load pfp image
 const userImage = document.querySelector('.user');
 userImage.src = getParameterValue("img");
 
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
-  var scrollItem = document.querySelector(".notefab");
-  scrollItem.addEventListener("click", function () {
+  var noteFab = document.querySelector(".notefab");
+  noteFab.addEventListener("click", function () {
     window.location.href =
-      "./test.html?courseKey=" + courseKey + "&email=" + email+"&img"+img;
+      "./test.html?courseKey=" + courseKey + "&email=" + email+"&img="+img;
   });
 });
-var jsonUrl =
-  "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses/" +
+
+
+
+
+var jsonUrl = "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses/" +
   courseKey +
   ".json";
 var peopleCoursesElement = document.querySelector(".peopleCourses");
