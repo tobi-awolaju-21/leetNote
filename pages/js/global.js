@@ -81,24 +81,24 @@ const signInWithGoogle = async () => {
 
       
 
-  document.addEventListener('DOMContentLoaded', function() {
-    // Get the element with the class 'scroll-item2'
-    var scrollItem = document.querySelector('img');
-  
-    // Add a click event listener to the element
-    scrollItem.addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the element with the class 'scroll-item2'
+  var scrollItem = document.querySelector('.scroll-item2');
+
+  // Add a click event listener to the element
+  scrollItem.addEventListener('click', function() {
     // Call the signInWithGoogle function
-    if(img==null){
+    if (img == null) {
       signInWithGoogle();
-      console.log()
-    }else{
+      console.log("signing");
+    } else {
       // go to profile pass those parameters
-      window.location.href =
-      "./profile.html?email=" + email+"&img="+img;
+      window.location.href = "./profile.html?email=" + email + "&img=" + img;
+      console.log("going to profile");
     }
-   
-    }); 
   });
+});
+
 
 
  
