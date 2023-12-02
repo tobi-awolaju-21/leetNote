@@ -88,8 +88,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Call the signInWithGoogle function
     if (img == null) {
       signInWithGoogle();
-      console.log("img"+img);
+      console.log("null img"+img);
     } else {
+      console.log("not null img"+img);
       // go to profile pass those parameters
       window.location.href = "./profile.html?email=" + email + "&img=" + img;
       console.log("going to profile");
