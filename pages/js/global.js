@@ -75,8 +75,6 @@ const signInWithGoogle = async () => {
   }
 };
 
-
-
 // Now you can call signInWithGoogle when you want to trigger the Google sign-in.
 
       
