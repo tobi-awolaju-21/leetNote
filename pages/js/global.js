@@ -10,8 +10,7 @@ function getParameterValue(parameterName) {
   const urlSearchParams = new URLSearchParams(new URL(url).search);
   return urlSearchParams.get(parameterName);
 }
-const courseKey = getParameterValue("courseKey");
-const email = getParameterValue("email");
+
 const img = getParameterValue("img");
 
 
@@ -78,23 +77,26 @@ const signInWithGoogle = async () => {
 // Now you can call signInWithGoogle when you want to trigger the Google sign-in.
 
       
-
 document.addEventListener('DOMContentLoaded', function() {
   // Get the element with the class 'scroll-item2'
   var scrollItem = document.querySelector('.user');
 
   // Add a click event listener to the element
   scrollItem.addEventListener('click', function() {
+    const emailElement = document.getElementsByClassName('email')[0];
+  
     // Call the signInWithGoogle function
-    if (img == null) {
+    if (img === null || emailElement.textContent === "") {
       signInWithGoogle();
-      console.log("null img"+img);
+      console.log("mail"+emailElement.textContent);
+      console.log("null img" + img);
     } else {
-      console.log("not null img"+img);
+      console.log("not null img" + img);
       // go to profile pass those parameters
       window.location.href = "./profile.html?email=" + email + "&img=" + img;
       console.log("going to profile");
     }
   });
 });
+
   
