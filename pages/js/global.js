@@ -75,24 +75,28 @@ const signInWithGoogle = async () => {
 };
 
 // Now you can call signInWithGoogle when you want to trigger the Google sign-in.
-
 document.addEventListener('DOMContentLoaded', function() {
   // Get the element with the class 'scroll-item2'
   var scrollItem = document.querySelector('.user');
 
   // Add a click event listener to the element
   scrollItem.addEventListener('click', function() {
-    const emailElement = document.getElementsByClassName('email')[0];
+    const emailElement = document.querySelector('.email');
   
+    // Define or pass 'img' variable
+    // For example: var img = document.getElementById('yourImgId');
+
     // Call the signInWithGoogle function
-    if (img === null || emailElement.textContent !== "") {
-      signInWithGoogle();
-      console.log("mail" + emailElement.textContent);
-      console.log("null img" + img);
+    if (!img) {
+      if (emailElement.textContent === "") {
+        signInWithGoogle();
+        console.log("mail: " + emailElement.textContent);
+        console.log("null img");
+      }
     } else {
-      console.log("not null img" + img);
+      console.log("not null img");
       // go to profile pass those parameters
-      window.location.href = "./profile.html?email=" + email + "&img=" + img;
+      window.location.href = "./profile.html?email=" + emailElement.textContent + "&img=" + img.src;
       console.log("going to profile");
     }
   });
