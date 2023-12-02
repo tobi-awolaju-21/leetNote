@@ -76,7 +76,6 @@ const signInWithGoogle = async () => {
 
 // Now you can call signInWithGoogle when you want to trigger the Google sign-in.
 
-      
 document.addEventListener('DOMContentLoaded', function() {
   // Get the element with the class 'scroll-item2'
   var scrollItem = document.querySelector('.user');
@@ -86,9 +85,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const emailElement = document.getElementsByClassName('email')[0];
   
     // Call the signInWithGoogle function
-    if (img === null || emailElement.textContent === "") {
+    if (img === null || emailElement.textContent !== "") {
       signInWithGoogle();
-      console.log("mail"+emailElement.textContent);
+      console.log("mail" + emailElement.textContent);
       console.log("null img" + img);
     } else {
       console.log("not null img" + img);
@@ -98,5 +97,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-
-  
