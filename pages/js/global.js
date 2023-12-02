@@ -83,7 +83,7 @@ const signInWithGoogle = async () => {
 
 document.addEventListener('DOMContentLoaded', function() {
   // Get the element with the class 'scroll-item2'
-  var scrollItem = document.querySelector('.scroll-item2');
+  var scrollItem = document.querySelector('.user');
 
   // Add a click event listener to the element
   scrollItem.addEventListener('click', function() {
