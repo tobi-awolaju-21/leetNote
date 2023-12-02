@@ -101,17 +101,3 @@ redirectToNotes2(courseKey);
   });
 // tobi was equaly here
 
-
-
-
-// profile
-document.addEventListener('DOMContentLoaded', function() {
-  // Get the element with the class 'scroll-item2'
-  var scrollItem = document.querySelector('img');
-
-  // Add a click event listener to the element
-  scrollItem.addEventListener('click', function() {
-  // Call the signInWithGoogle function
-console.log("user profile");
-  }); 
-});

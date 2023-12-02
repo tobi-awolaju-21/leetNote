@@ -5,6 +5,15 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstati
 
 
 
+const url = window.location.href;
+function getParameterValue(parameterName) {
+  const urlSearchParams = new URLSearchParams(new URL(url).search);
+  return urlSearchParams.get(parameterName);
+}
+const courseKey = getParameterValue("courseKey");
+const email = getParameterValue("email");
+const img = getParameterValue("img");
+
 
 
 // Your web app's Firebase configuration
@@ -79,7 +88,14 @@ const signInWithGoogle = async () => {
     // Add a click event listener to the element
     scrollItem.addEventListener('click', function() {
     // Call the signInWithGoogle function
-    signInWithGoogle()
+    if(img==null){
+      signInWithGoogle()
+    }else{
+      // go to profile pass those parameters
+      window.location.href =
+      "./profile.html?email=" + email+"&img="+img;
+    }
+   
     }); 
   });
 
