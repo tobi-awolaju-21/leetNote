@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } 
     };
     
-
+//reszt
 
     // Call the signInWithGoogle function
     if (!img) {
