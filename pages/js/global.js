@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         signInWithGoogle();
         console.log("mail: " + emailElement.textContent);
         console.log("null img");
+        console.log("to profile illegally")
       }else{
         console.log("going to profile");
       ToProfile()
