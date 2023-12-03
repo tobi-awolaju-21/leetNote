@@ -27,8 +27,6 @@ async function checkSubscriptionStatus() {
     } else {
       console.log("Not a subscriber");
 
-
-
      window.location.href = "./pages/profile.html?email=" +email+ "&img=" + img;
 
     }
