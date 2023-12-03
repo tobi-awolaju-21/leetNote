@@ -1,9 +1,9 @@
 async function checkSubscriptionStatus() {
-    const currentPageUrl = window.location.href;
-  const urlSearchParams = new URLSearchParams(currentPageUrl);
-  
-  const img = urlSearchParams.get('img');
-  const email = urlSearchParams.get('email');
+    const currentPageUrl = window.location.search; // Use window.location.search instead of window.location.href
+    const urlSearchParams = new URLSearchParams(currentPageUrl);
+    
+    const img = urlSearchParams.get('img');
+    const email = urlSearchParams.get('email');
 
 //set img and email to the right values
 if (img) {
