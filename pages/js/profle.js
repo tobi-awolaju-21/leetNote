@@ -5,7 +5,7 @@ async function checkSubscriptionStatus() {
   const img = urlSearchParams.get('img');
   const email = urlSearchParams.get('email');
   const apiEndpoint = "https://script.google.com/macros/s/AKfycbxgixYFP9fk9lfn_C7LKbkyP8-WWjoKqStk3Fi88JOJg5rSuHxXnUCxA1a91vstEr9vYg/exec?email=" + email;
-  
+  console.log(apiEndpoint+"Profile page");
   // Make a GET request to the API endpoint
   fetch(apiEndpoint)
     .then(response => response.json())
