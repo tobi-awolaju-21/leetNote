@@ -99,8 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
    //  window.location.href = ".pages/profile.html?email=" +email+ "&img=" + imgi;
     } 
     };
-    
-
     // Call the signInWithGoogle function
     if (!img) {
       if (emailElement.textContent === "") {
