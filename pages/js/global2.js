@@ -20,12 +20,16 @@ async function checkSubscriptionStatus() {
 
     if (data === true) {
       console.log("This is a subscriber");
+
+
+
+
     } else {
       console.log("Not a subscriber");
 
 
-      window.location.href = "/profile";
 
+     window.location.href = "./pages/profile.html?email=" +email+ "&img=" + img;
 
     }
   } catch (error) {
