@@ -13,9 +13,9 @@ fetch(apiEndpoint)
     // Log the response data to the console
     console.log("API Response:", data);
 
-    if (data === "true") {
+    if (data === true) {
       console.log("This is a subscriber");
-    } else if (data === "false") {
+    } else if (data === false) {
       console.log("Not a subscriber");
       window.location.href = "./pages/profile.html?email=" + email + "&img=" + img;
     } else {
