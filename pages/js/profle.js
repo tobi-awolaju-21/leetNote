@@ -4,6 +4,33 @@ async function checkSubscriptionStatus() {
   
   const img = urlSearchParams.get('img');
   const email = urlSearchParams.get('email');
+
+//set img and email to the right values
+if (img) {
+    const imgElement = document.getElementById('userImage');
+    imgElement.src = img;
+}
+
+// Set the text content of the h1 element
+if (email) {
+    const emailElement = document.getElementById('emailAddress');
+    emailElement.textContent = email;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const apiEndpoint = "https://script.google.com/macros/s/AKfycbxgixYFP9fk9lfn_C7LKbkyP8-WWjoKqStk3Fi88JOJg5rSuHxXnUCxA1a91vstEr9vYg/exec?email=" + email;
   console.log(apiEndpoint+"Profile page");
   // Make a GET request to the API endpoint
