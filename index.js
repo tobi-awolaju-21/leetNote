@@ -18,7 +18,10 @@ var newDiv = document.createElement("div");
       Live
     </div>
     <div class="status2">
-      <h1>${courseKey}</h1>
+      <p style="font-size: 20px;
+      font-weight: 400;
+      padding:0px;
+      margin:0px; ">${courseKey}</p>
       <h4>6:00 - 6:30</h4>
     </div>
   `;
