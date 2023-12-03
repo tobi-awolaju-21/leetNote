@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     } else {
      signInWithGoogle();
-     // ToProfile() 
+    
     }
   });
 });
