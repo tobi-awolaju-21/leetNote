@@ -86,9 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Define or pass 'img' variable
     // For example: var img = document.getElementById('yourImgId');
 
-
-
-
     var email = "deyplay@gmail.com";
     var imgi = "eyplay again";
     
