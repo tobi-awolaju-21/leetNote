@@ -66,8 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const emailElement = document.querySelector('.email');
     // Define or pass 'img' variable
     // For example: var img = document.getElementById('yourImgId');
-    var email = "deyplay@gmail.com";
-    var imgi = "eyplay again";
+    var email = emailElement.innerText;
+const userImage2 = document.querySelector('.user');
+    var imgi = userImage2.src;
     const ToProfile = () => {
     try {
      window.location.href = "./pages/profile.html?email=" +email+ "&img=" + imgi;
