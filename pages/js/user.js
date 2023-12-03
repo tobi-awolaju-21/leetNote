@@ -16,47 +16,26 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig);
 const database = getDatabase(firebaseApp);
 
-const username = "seconduser";
-let logfiles = [];
-let course = [];
-let metadata = {};
-
-// logfile
-for (let _repeat108 = 0; _repeat108 < 8; _repeat108++) {
-    const logfilesData = {
-        event: "joinedSpace",
-        timestamp: "36685578889"
-    };
-    logfiles.push(logfilesData);
-}
-
-// user course
-for (let _repeat100 = 0; _repeat100 < 8; _repeat100++) {
-    const coursesData = {
-        code: "MTS 201",
-        progress: "0%"
-    };
-    course.push(coursesData);
-}
-
-// user metadata
-metadata = {
-    name: username,
-    id: "62c519101bc628",
-    department: "EEE",
-    level: "200lv",
-    firstOnline: "628229393",
-    lastOnline: "63839393"
+const existingUserData = {
+    "courses": "[{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"},{\"code\":\"MTS 201\",\"progress\":\"0%\"}]",
+    "logfile": "[{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"},{\"event\":\"joinedSpace\",\"timestamp\":\"36685578889\"}]",
+    "metadata": "{\"firstOnline\":\"628229393\",\"level\":\"200lv\",\"name\":\"firstuser\",\"lastOnline\":\"63839393\",\"id\":\"62c519101bc628\",\"department\":\"EEE\"}",
+    "username": "firstuser"
 };
 
-// payload
+// Parse the existing user data
+const existingCourses = JSON.parse(existingUserData.courses);
+const existingLogfile = JSON.parse(existingUserData.logfile);
+const existingMetadata = JSON.parse(existingUserData.metadata);
+
+// Update the Firebase Realtime Database with the existing user data
 const dataToUpdate = {
-    username: username,
-    metadata: JSON.stringify(metadata),
-    courses: JSON.stringify(course),
-    logfile: JSON.stringify(logfiles)
+    username: existingUserData.username,
+    metadata: existingMetadata,
+    courses: existingCourses,
+    logfile: existingLogfile
 };
 
 // Update the Firebase Realtime Database
-const databaseRef = ref(database, `users/${username}`);
+const databaseRef = ref(database, `users/${existingUserData.username}`);
 update(databaseRef, dataToUpdate);
