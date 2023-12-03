@@ -90,13 +90,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     var email = "deyplay@gmail.com";
-    img = "eyplay again";
+    var imgi = "eyplay again";
     
     const ToProfile = () => {
     try {
-     window.location.href = "./profile.html?email=" +email+ "&img=" + img;
+     window.location.href = "./profile.html?email=" +email+ "&img=" + imgi;
     } catch (error) {
-     window.location.href = ".pages/profile.html?email=" +email+ "&img=" + img;
+     window.location.href = ".pages/profile.html?email=" +email+ "&img=" + imgi;
     } 
     };
     
