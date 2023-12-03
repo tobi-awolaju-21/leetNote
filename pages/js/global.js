@@ -11,7 +11,7 @@ function getParameterValue(parameterName) {
   return urlSearchParams.get(parameterName);
 }
 
-const img = getParameterValue("img");
+var img = getParameterValue("img");
 
 
 
@@ -93,21 +93,26 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("mail: " + emailElement.textContent);
         console.log("null img");
       }else{
-
-        console.log("not null img");
-        // go to profile pass those parameters
-        window.location.href = "./profile.html?email=" + emailElement.textContent + "&img=" + img.src;
         console.log("going to profile");
-
-
+        ToProfile()
       }
     } else {
-      console.log("not null img");
-      // go to profile pass those parameters
-      window.location.href = ".pages/profile.html?email=" + emailElement.textContent + "&img=" + img.src;
-
-      window.location.href = "./profile.html?email=" + emailElement.textContent + "&img=" + img.src;
       console.log("going to profile");
+      ToProfile() 
     }
   });
 });
+
+
+
+var email = "deyplay@gmail.com";
+img = "eyplay again";
+
+const ToProfile = () => {
+try {
+ window.location.href = "./profile.html?email=" +email+ "&img=" + img;
+} catch (error) {
+ window.location.href = ".pages/profile.html?email=" +email+ "&img=" + img;
+} 
+};
+
