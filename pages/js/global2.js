@@ -1,10 +1,31 @@
-//check subscription status by extracting the parameter email from the current page url
+async function checkSubscriptionStatus() {
+  const currentPageUrl = window.location.href;
+  const urlSearchParams = new URLSearchParams(currentPageUrl);
+  const email = urlSearchParams.get('email');
+  const ApiEndPoint = "https://www.google.com";
+  const postData = { email };
 
-ApiEndPoint = "https://www.google.com"
+  try {
+    const response = await fetch(ApiEndPoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(postData),
+    });
 
-//send the parameter email via http post request to the url ApiEndPoint
+    const data = await response.json();
 
-//await the response
-//if it returned true, console.log this is a subscriber
-//else console log not a subscriber and 
-redirect to profile page.
+    if (data === true) {
+      console.log("This is a subscriber");
+    } else {
+      console.log("Not a subscriber");
+      window.location.href = "/profile";
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+// Call the async function
+checkSubscriptionStatus();
