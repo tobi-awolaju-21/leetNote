@@ -9,6 +9,9 @@ async function checkSubscriptionStatus() {
 if (img) {
     const imgElement = document.getElementById('userImage');
     imgElement.src = img;
+    imgElement.width = 200;
+    imgElement.height = 200;
+    imgElement.style.margin = '20px';
 }
 
 // Set the text content of the h1 element
