@@ -71,20 +71,22 @@
   
      
       #get-started-btn {
-        display: block;
-        margin: 50px auto;
-        margin-bottom: 75px;
-        padding: 10px 20px;
-        background-color: rgb(255, 166, 0);
-        color: #000000;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 50px;
-        padding-top: 15px;
-        height: 20px;
-        width: 80%;
-     
-      }
+  display: block;
+  margin: 50px auto;
+  margin-bottom: 75px;
+  padding: 10px 20px;
+  background-color: rgb(255, 166, 0);
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  padding-top: 15px;
+  height: 20px;
+  width: 80%;
+  opacity: 0%;
+  transition: opacity 1s ease; /* Add a transition for smooth animation */
+   
+}
 
       
       #get-started-btn2 {
@@ -100,8 +102,11 @@
         padding-top: 15px;
         height: 20px;
         width: 80%;
-     
+        opacity: 0%;
+  transition: opacity 1s ease; /* Add a transition for smooth animation */
+   
       }
+
 
       footer {
         background-color: #efefef;
@@ -112,6 +117,13 @@
         bottom: 0;
         width: 100%;
       }
+
+        /* Initial style for hidden elements */
+    h1 {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
     </style>
 
     <body>
@@ -124,7 +136,7 @@
 
       <h1 style="font-weight:bold; margin-bottom: 20px;">What you are getting </h1>
     
-      <h1  style="margin-bottom:5px;">- Get a B after Stabbing classes</h1>
+      <h1  style="margin-bottom:5px;">- Get at least a 60 B after Stabbing classes</h1>
       <h1  style="margin-bottom:5px;">- Get the actual notes in your pockect after failing to snap notes </h1>
       <h1  style="margin-bottom:5px;">-All the leaked pdfs as question and answer in one place</h1>
       <h1  style="margin-bottom:5px;">-Live classes 5am-7am</h1>
@@ -187,7 +199,58 @@
       const landing = document.querySelector('.landing');
       landing.style.display = 'none';
     }
+
   </script>
+
+<script>
+  // Intersection Observer to handle the fade-in effect
+  document.addEventListener("DOMContentLoaded", function() {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = "translateY(0)";
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    document.querySelectorAll("h1").forEach(element => {
+      observer.observe(element);
+    });
+
+    
+  });
+
+
+
+// Get the button element
+const getStartedBtn = document.getElementById('get-started-btn');
+// Get the button element
+const getStartedBtn2 = document.getElementById('get-started-btn2');
+
+// Function to animate opacity to 100%
+function animateOpacity() {
+  getStartedBtn.style.opacity = '1';
+  getStartedBtn2.style.opacity = '1';
+}
+
+
+function animateOpacity2() {
+  getStartedBtn2.style.opacity = '1';
+}
+// Trigger the animation after a delay (you can adjust the delay as needed)
+setTimeout(animateOpacity, 500); // Delay of 1000 milliseconds (1 second)
+setTimeout(animateOpacity2, 750);
+</script>
+
+
   <!-- Include the app.js file -->
   <script type="module" src="./index.js"></script>
   <script type="module" src="./pages/js/global.js"></script>
