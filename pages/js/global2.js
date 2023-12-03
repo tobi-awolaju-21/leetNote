@@ -1,6 +1,8 @@
 async function checkSubscriptionStatus() {
   const currentPageUrl = window.location.href;
   const urlSearchParams = new URLSearchParams(currentPageUrl);
+
+  const img = urlSearchParams.get('img');
   const email = urlSearchParams.get('email');
   const ApiEndPoint = "https://www.google.com";
   const postData = { email };
@@ -20,7 +22,11 @@ async function checkSubscriptionStatus() {
       console.log("This is a subscriber");
     } else {
       console.log("Not a subscriber");
+
+
       window.location.href = "/profile";
+
+
     }
   } catch (error) {
     console.error('Error:', error);
