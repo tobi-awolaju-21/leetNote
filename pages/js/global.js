@@ -86,6 +86,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Define or pass 'img' variable
     // For example: var img = document.getElementById('yourImgId');
 
+
+
+
+    var email = "deyplay@gmail.com";
+    img = "eyplay again";
+    
+    const ToProfile = () => {
+    try {
+     window.location.href = "./profile.html?email=" +email+ "&img=" + img;
+    } catch (error) {
+     window.location.href = ".pages/profile.html?email=" +email+ "&img=" + img;
+    } 
+    };
+    
+
+
     // Call the signInWithGoogle function
     if (!img) {
       if (emailElement.textContent === "") {
@@ -104,15 +120,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-var email = "deyplay@gmail.com";
-img = "eyplay again";
-
-const ToProfile = () => {
-try {
- window.location.href = "./profile.html?email=" +email+ "&img=" + img;
-} catch (error) {
- window.location.href = ".pages/profile.html?email=" +email+ "&img=" + img;
-} 
-};
 
