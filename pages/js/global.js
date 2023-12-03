@@ -94,9 +94,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const ToProfile = () => {
     try {
-     window.location.href = "./profile.html?email=" +email+ "&img=" + imgi;
-    } catch (error) {
      window.location.href = ".pages/profile.html?email=" +email+ "&img=" + imgi;
+    } catch (error) {
+   //  window.location.href = ".pages/profile.html?email=" +email+ "&img=" + imgi;
     } 
     };
     
