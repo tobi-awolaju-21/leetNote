@@ -4,7 +4,10 @@ async function checkSubscriptionStatus() {
 
   const img = urlSearchParams.get('img');
   const email = urlSearchParams.get('email');
-  const ApiEndPoint = "https://www.google.com";
+  const ApiEndPoint = "https://script.google.com/macros/s/AKfycbxgixYFP9fk9lfn_C7LKbkyP8-WWjoKqStk3Fi88JOJg5rSuHxXnUCxA1a91vstEr9vYg/exec?email=" + email;
+
+  console.log(ApiEndPoint);
+  // Update the API endpoint with the new URL including the email parameter
   const postData = { email };
 
   try {
@@ -18,17 +21,13 @@ async function checkSubscriptionStatus() {
 
     const data = await response.json();
 
-    if (data === true) {
+    if (data === "true") {
       console.log("This is a subscriber");
-
-
-
-
-    } else {
+    } else if (data === "false") {
       console.log("Not a subscriber");
-
-     window.location.href = "./pages/profile.html?email=" +email+ "&img=" + img;
-
+      window.location.href = "./pages/profile.html?email=" + email + "&img=" + img;
+    } else {
+      console.log("Unexpected response from the server");
     }
   } catch (error) {
     console.error('Error:', error);
