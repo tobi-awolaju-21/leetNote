@@ -93,13 +93,11 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("mail: " + emailElement.textContent);
         console.log("null img");
       }else{
-        console.log("going to profile 1");
-        signInWithGoogle();
-      //  ToProfile()
+        console.log("going to profile");
+      ToProfile()
       }
     } else {
-      console.log("going to profile 2");
-      signInWithGoogle();
+     signInWithGoogle();
      // ToProfile() 
     }
   });
