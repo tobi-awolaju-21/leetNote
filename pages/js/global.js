@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
       ToProfile()
       }
     } else {
+      console.log("to profile ")
      signInWithGoogle();
     
     }
