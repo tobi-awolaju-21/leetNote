@@ -17,7 +17,7 @@ fetch(apiEndpoint)
       console.log("This is a subscriber");
     } else if (data === false) {
       console.log("Not a subscriber");
-      window.location.href = "./pages/profile.html?email=" + email + "&img=" + img;
+      window.location.href = "./profile.html?email=" + email + "&img=" + img;
     } else {
       console.log("Unexpected response from the server");
     }
