@@ -11,7 +11,7 @@ function getParameterValue(parameterName) {
   return urlSearchParams.get(parameterName);
 }
 
-var img = getParameterValue("img");
+const img = getParameterValue("img");
 
 
 
