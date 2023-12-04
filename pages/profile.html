@@ -84,42 +84,6 @@
   <!-- Dropdown content will be dynamically loaded here -->
 </div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  // JSON data
-  const jsonData = [
-  {"department": "EEE 100lv"},
-  {"department": "EEE 200lv"},
-  {"department": "CVE 100lv"},
-  {"department": "MEE 100lv"},
-  {"department": "AGE 100lv"},
-  {"department": "ICT 100lv"},
-  {"department": "CPE 100lv"},
-  {"department": "IPE 100lv"},
-  {"department": "MME 100lv"},
-  {"department": "MNE 100lv"}
-]
-;
-
-  // Function to populate dropdown with JSON data
-  function populateDropdown() {
-    const dropdownContent = document.getElementById('dropdown-content');
-
-    jsonData.forEach(item => {
-      const link = document.createElement('a');
-      link.textContent = item.department;
-      link.addEventListener('click', function() {
-        document.getElementById('selected-item').textContent = item.department;
-      });
-      dropdownContent.appendChild(link);
-    });
-  }
-
-  // Call the function to populate dropdown
-  populateDropdown();
-});
-</script>
 <!--end of drop down-->
 
 
