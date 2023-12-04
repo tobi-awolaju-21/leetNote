@@ -60,13 +60,27 @@ fetch(jsonUrl)
         const questionsArray = JSON.parse(item.question);
         questionsArray.forEach((questionItem) => {
           const questionTileHTML = `
-                <div class="question-tile">
-                    <p>${questionItem.question}</p>
-                    <input class="submit-button" type="file" id="imageInput" accept="image/*" style="display: block;">
-                </div>
-                <div class="solution">
-                    ${questionItem.solution}
-                </div>
+          
+          <div class="question-tile">
+          <p>${questionItem.question}</p>
+          <input class="submit-button" type="file" id="imageInput" accept="image/*" style="display: block;">
+      </div>
+      <div class="solution">
+          ${questionItem.solution}
+      </div>
+
+          <script>document.addEventListener('DOMContentLoaded', function () {
+            // Get the solution div element
+            var solutionDiv = document.getElementById('solutionDiv');
+        
+            // Add click event listener to toggle the blur class on click
+            solutionDiv.addEventListener('click', function () {
+                solutionDiv.classList.toggle('blur');
+            });
+        });
+        </script>
+
+               
             `;
           const questionDiv = document.createElement("div");
           questionDiv.innerHTML += questionTileHTML;
