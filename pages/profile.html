@@ -36,7 +36,132 @@
 <img id="userImage"class="user" src="https://firebasestorage.googleapis.com/v0/b/leetnote-7cfce.appspot.com/o/1700792226453.png?alt=media&token=a57fcc0b-0b25-4992-9f48-764705f3dfcb" alt="Sign in with Google" width="200px" height="200px">
 
 <h1 id="emailAddress">Email address</h1>
-<h1>.'..</h1>
+<!--Start of drop down-->
+<style>
+  /* Basic styling for the dropdown */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-top:10px;
+    background-color: #e1e1e1;
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 50px;
+    width: 150px;
+  }
+
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(152, 152, 152, 0.2);
+  z-index: 1;
+  width: 150px;
+  transform: translateX(0px); /* Corrected syntax for translation */
+  transition: transform 0.3s ease; /* Added transition property for smooth animation */
+}
+
+
+  .dropdown-content a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<div class="dropdown" id="dropdown">
+<div id="selected-item">EEE 200lv</div>
+<div class="dropdown-content" id="dropdown-content">
+  <!-- Dropdown content will be dynamically loaded here -->
+</div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // JSON data
+  const jsonData = [
+  {"department": "EEE 100lv"},
+  {"department": "EEE 200lv"},
+  {"department": "CVE 100lv"},
+  {"department": "MEE 100lv"},
+  {"department": "AGE 100lv"},
+  {"department": "ICT 100lv"},
+  {"department": "CPE 100lv"},
+  {"department": "IPE 100lv"},
+  {"department": "MME 100lv"},
+  {"department": "MNE 100lv"}
+]
+;
+
+  // Function to populate dropdown with JSON data
+  function populateDropdown() {
+    const dropdownContent = document.getElementById('dropdown-content');
+
+    jsonData.forEach(item => {
+      const link = document.createElement('a');
+      link.textContent = item.department;
+      link.addEventListener('click', function() {
+        document.getElementById('selected-item').textContent = item.department;
+      });
+      dropdownContent.appendChild(link);
+    });
+  }
+
+  // Call the function to populate dropdown
+  populateDropdown();
+});
+</script>
+<!--end of drop down-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <style>
      .subscribe-btn {
         display:none;
