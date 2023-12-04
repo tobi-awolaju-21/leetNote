@@ -43,6 +43,9 @@ if (!response.ok) {
   })
   .then((jsonData) => {
  console.log(jsonData);
+ if(oneOfMyCourses(courseKey)){
+
+  
  Object.keys(jsonData).forEach(function (courseKey) {
 var newDiv = document.createElement("div");
       newDiv.className = "scroll-item";
@@ -79,7 +82,13 @@ window.location.href =
       });
 peopleSpacesElement.appendChild(newDiv);
     });
+
+
+  }
   })
+
+
+
   .catch((error) => {
     console.error("Error fetching JSON:", error);
   });
@@ -93,6 +102,7 @@ fetch(jsonUrl)
 return response.json();
   })
   .then((jsonData) => {
+    if(oneOfMyCourses(courseKey)){
 Object.keys(jsonData).forEach(function (courseKey) {
 var newDiv2 = document.createElement("div");
       newDiv2.className = "scroll-item2";
@@ -131,6 +141,10 @@ redirectToNotes2(courseKey);
       });
   peopleCoursesElement.appendChild(newDiv2);
     });
+
+  }
+
+  
   })
   .catch((error) => {
     console.error("Error fetching JSON:", error);
