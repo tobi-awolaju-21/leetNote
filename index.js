@@ -43,10 +43,12 @@ if (!response.ok) {
   })
   .then((jsonData) => {
  console.log(jsonData);
- if(oneOfMyCourses(courseKey)){
+
 
   
  Object.keys(jsonData).forEach(function (courseKey) {
+  if(oneOfMyCourses(courseKey)){
+
 var newDiv = document.createElement("div");
       newDiv.className = "scroll-item";
  newDiv.innerHTML = `
@@ -81,10 +83,11 @@ window.location.href =
         checkIfUserSignedIn();
       });
 peopleSpacesElement.appendChild(newDiv);
+}
     });
 
 
-  }
+
   })
 
 
@@ -102,8 +105,9 @@ fetch(jsonUrl)
 return response.json();
   })
   .then((jsonData) => {
-    if(oneOfMyCourses(courseKey)){
+
 Object.keys(jsonData).forEach(function (courseKey) {
+  if(oneOfMyCourses(courseKey)){
 var newDiv2 = document.createElement("div");
       newDiv2.className = "scroll-item2";
  newDiv2.innerHTML = `
@@ -140,9 +144,10 @@ var encodedCourseKey = encodeURIComponent(clickedCourseKey);
 redirectToNotes2(courseKey);
       });
   peopleCoursesElement.appendChild(newDiv2);
+}
     });
 
-  }
+
 
 
   })
