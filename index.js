@@ -1,6 +1,8 @@
 
 myCourses = "https://leetnote-7cfce-default-rtdb.firebaseio.com/users/tobiawolaju21/courses.json";
 
+myCourseJson;
+
 fetch(myCourses)
   .then((response) => {
     if (!response.ok) {
@@ -10,7 +12,7 @@ fetch(myCourses)
   })
   .then((jsonData) => {
     console.log(jsonData);
-    
+    myCourseJson
   });
 
 
