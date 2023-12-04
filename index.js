@@ -146,10 +146,6 @@ redirectToNotes2(courseKey);
   peopleCoursesElement.appendChild(newDiv2);
 }
     });
-
-
-
-
   })
   .catch((error) => {
     console.error("Error fetching JSON:", error);
