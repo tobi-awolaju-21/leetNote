@@ -1,3 +1,25 @@
+
+myCourses = "https://leetnote-7cfce-default-rtdb.firebaseio.com/users/tobiawolaju21/courses.json";
+
+fetch(myCourses)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then((jsonData) => {
+    console.log(jsonData);
+    
+  });
+
+
+
+
+
+
+function LoadContents(){
+
 var jsonUrl =
   "https://leetnote-7cfce-default-rtdb.firebaseio.com/classroom.json";
 var peopleSpacesElement = document.querySelector(".scroll-container");
@@ -104,3 +126,5 @@ redirectToNotes2(courseKey);
   });
 // tobi was equaly here
 
+
+}
