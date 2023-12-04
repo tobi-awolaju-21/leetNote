@@ -2,6 +2,7 @@
 myCourses = "https://leetnote-7cfce-default-rtdb.firebaseio.com/users/tobiawolaju21/courses.json";
 
 myCourseJson;
+myCourseJsonJSON
 
 fetch(myCourses)
   .then((response) => {
@@ -12,8 +13,21 @@ fetch(myCourses)
   })
   .then((jsonData) => {
     console.log(jsonData);
-    myCourseJson
+    myCourseJsonJSON = jsonData;
+    myCourseJson = JSON.stringify(jsonData)
   });
+  
+  function oneOfMyCourses(course) {
+    const courseCodes = myCourseJsonJSON.map(course => course.code);
+    return courseCodes.includes(course);
+  }
+  
+  // Example usage:
+  const courseToCheck = "MTS 201";
+  const isCoursePresent = oneOfMyCourses(courseToCheck);
+  
+  console.log(isCoursePresent);
+
 
 
 
