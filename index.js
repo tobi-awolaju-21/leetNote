@@ -14,6 +14,15 @@ fetch(myCourses)
     console.log(jsonData);
     myCourseJsonJSON = jsonData;
     myCourseJson = JSON.stringify(jsonData);
+
+    // Call the function after data is processed
+    const courseToCheck = "MTS 201";
+    const isCoursePresent = oneOfMyCourses(courseToCheck);
+  
+    console.log(isCoursePresent);
+  })
+  .catch((error) => {
+    console.error("Error fetching data:", error);
   });
   
 function oneOfMyCourses(course) {
@@ -21,11 +30,6 @@ function oneOfMyCourses(course) {
   return courseCodes.includes(course);
 }
 
-// Example usage:
-const courseToCheck = "MTS 201";
-const isCoursePresent = oneOfMyCourses(courseToCheck);
-
-console.log(isCoursePresent);
 
 
 
