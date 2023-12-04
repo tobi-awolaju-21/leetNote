@@ -4,6 +4,8 @@ var myCourses = "https://leetnote-7cfce-default-rtdb.firebaseio.com/users/tobiaw
 var myCourseJson;
 var myCourseJsonJSON;
 
+
+
 fetch(myCourses)
   .then((response) => {
     if (!response.ok) {
