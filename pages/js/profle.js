@@ -1,3 +1,4 @@
+
 async function checkSubscriptionStatus() {
     const currentPageUrl = window.location.search; // Use window.location.search instead of window.location.href
     const urlSearchParams = new URLSearchParams(currentPageUrl);
@@ -19,20 +20,6 @@ if (email) {
     const emailElement = document.getElementById('emailAddress');
     emailElement.textContent = email;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   const apiEndpoint = "https://script.google.com/macros/s/AKfycbxgixYFP9fk9lfn_C7LKbkyP8-WWjoKqStk3Fi88JOJg5rSuHxXnUCxA1a91vstEr9vYg/exec?email=" + email;
   console.log(apiEndpoint+" niceProfile page");
