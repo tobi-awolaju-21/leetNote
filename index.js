@@ -22,7 +22,7 @@ fetch(myCourses)
 
     //check mate
     console.log(oneOfMyCourses("MTS 201"));
-    LoadContents()
+    LoadContents();
 
   });
   
@@ -144,7 +144,7 @@ redirectToNotes2(courseKey);
 
   }
 
-  
+
   })
   .catch((error) => {
     console.error("Error fetching JSON:", error);
