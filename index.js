@@ -2,7 +2,7 @@
 var myCourses = "https://leetnote-7cfce-default-rtdb.firebaseio.com/users/tobiawolaju21/courses.json";
 
 var myCourseJson;
-var myCourseJsonJSON
+var myCourseJsonJSON;
 
 fetch(myCourses)
   .then((response) => {
