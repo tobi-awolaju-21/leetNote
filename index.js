@@ -1,7 +1,12 @@
 var myCourses = "https://leetnote-7cfce-default-rtdb.firebaseio.com/users/tobiawolaju21/courses.json";
 
-var myCourseJson = null; // Default value is set to null
+var myCourseJson = "null"; // Default value is set to null
 var myCourseJsonJSON = []; // Default value is set to an empty array
+
+function oneOfMyCourses(course) {
+  return myCourseJson.includes(course);
+}
+
 
 fetch(myCourses)
   .then((response) => {
@@ -15,27 +20,13 @@ fetch(myCourses)
     myCourseJsonJSON = jsonData;
     myCourseJson = JSON.stringify(jsonData);
 
-    // Call the function after data is processed
-    const courseToCheck = "MTS 201";
-    const isCoursePresent = oneOfMyCourses(courseToCheck);
-  
-    console.log(isCoursePresent);
-  })
-  .catch((error) => {
-    console.error("Error fetching data:", error);
+    //check mate
+    console.log(oneOfMyCourses("MTS 201"));
+    LoadContents()
+
   });
   
-function oneOfMyCourses(course) {
-  const courseCodes = myCourseJsonJSON.map(course => course.code);
-  return courseCodes.includes(course);
-}
-
-
-
-
-
-
-
+  
 
 
 function LoadContents(){
