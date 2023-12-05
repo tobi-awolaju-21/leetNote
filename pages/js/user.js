@@ -40,7 +40,7 @@ function updateCourses(courses) {
     const databaseRef = ref(database, `users/${formattedMail}`);
     const dataToUpdate = {
       username: formattedMail,
-      department: JSON.stringify(existingDepartment),
+      department: SelectedDepartment,
       courses: courses,
       logfile: JSON.stringify(existingLogfile)
     };
