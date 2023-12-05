@@ -21,7 +21,7 @@ let existingCourses;
 let existingLogfile;
 let existingDepartment;
 let existingUserData; // Declare the variable outside the fetch block
-
+var SelectedDepartment = "";
 
 
 // Get the email from the query parameter in the URL
@@ -87,7 +87,7 @@ fetch(url)
      // start of account creation
     const dataToUpdate = {
       username: formattedMail,
-      department: "EEE 200lv",
+      department: SelectedDepartment,
       courses: "[]",
       logfile: "[]",
     };
@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
       link.addEventListener('click', function () {
         document.getElementById('selected-item').textContent = item.department;
         console.log("Selected Department:", item.department);
+        SelectedDepartment = item.department;
         updateCourseJSON(item.department);
       });
       dropdownContent.appendChild(link);
