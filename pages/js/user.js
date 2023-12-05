@@ -113,17 +113,15 @@ function updateCourseJSON(department) {
 document.addEventListener("DOMContentLoaded", function () {
   // JSON data
   const jsonData = [
-    { "department": "EEE 100lv" },
     { "department": "EEE 200lv" },
-    { "department": "CVE 100lv" },
-    { "department": "MEE 100lv" },
+    { "department": "CVE 200lv" },
     { "department": "MEE 200lv" },
-    { "department": "AGE 100lv" },
-    { "department": "ICT 100lv" },
-    { "department": "CPE 100lv" },
-    { "department": "IPE 100lv" },
-    { "department": "MME 100lv" },
-    { "department": "MNE 100lv" }
+    { "department": "AGE 200lv" },
+    { "department": "ICT 200lv" },
+    { "department": "CPE 200lv" },
+    { "department": "IPE 200lv" },
+    { "department": "MME 200lv" },
+    { "department": "MNE 200lv" }
   ];
 
   // Function to populate dropdown with JSON data
