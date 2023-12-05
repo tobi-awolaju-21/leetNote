@@ -87,10 +87,11 @@ fetch(url)
      // start of account creation
     const dataToUpdate = {
       username: formattedMail,
-      department: SelectedDepartment,
+      department: "NEW",
       courses: "[]",
       logfile: "[]",
     };
+
 
     // Update the Firebase Realtime Database
     const databaseRef = ref(database, `users/${formattedMail}`);
