@@ -84,6 +84,7 @@ fetch(url)
     update(databaseRef, dataToUpdate);
   })
   .catch(error => {
+    console.log("You are a new user, let create your account")
     console.error("Error fetching data:", error);
   });
 
