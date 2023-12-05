@@ -98,7 +98,7 @@ function updateCourseJSON(department) {
 
       const dataToUpdate = {
         username: existingUserData.username,
-        department: JSON.stringify(existingDepartment),
+        department: department,
         courses: JSON.stringify(data),
         logfile: JSON.stringify(existingLogfile),
       };
