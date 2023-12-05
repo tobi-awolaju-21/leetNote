@@ -84,7 +84,18 @@ fetch(url)
     update(databaseRef, dataToUpdate);
   })
   .catch(error => {
-    console.log("You are a new user, let create your account")
+     // start of account creation
+    const dataToUpdate = {
+      username: formattedMail,
+      department: "EEE 200lv",
+      courses: "[]",
+      logfile: "[]",
+    };
+
+    // Update the Firebase Realtime Database
+    const databaseRef = ref(database, `users/${formattedMail}`);
+    update(databaseRef, dataToUpdate);
+    //end of account creation for you fam
     console.error("Error fetching data:", error);
   });
 
@@ -107,7 +118,7 @@ function updateCourseJSON(department) {
       // Update firebase RDB
       // ...
     })
-    .catch(error => console.error('Error during fetch:', error.message));
+    .catch(error =>  location.reload());
 }
 
 // code for departments dropdown
