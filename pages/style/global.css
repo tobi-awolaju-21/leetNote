@@ -1,0 +1,146 @@
+
+  /*at all*/
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Make the scrollbar track transparent */
+  }
+  html {
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+  }
+  
+  body {
+    background-color: rgb(255, 255, 255);
+    padding: 0px;
+    margin: 0px;
+   }
+
+.tipBar {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: #ffffff;
+    color:#000000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.064); /* Adjust the shadow as needed */    
+    width: 100vw;
+    height:70px;
+    z-index: 1; /* Ensure it's above other content */
+     
+  }
+
+  .user{
+    margin-right:20px;
+    width:27px;
+    height:27px;
+    margin-top:17px;
+  }
+  
+
+/*at index*/
+  .peopleCourses{
+    background-color:  rgb(255, 255, 255);
+    width:100vw;
+    height: calc(100vh - 270px);
+    margin-top: 30px;
+  }
+
+/*at all*/
+h2{ font-size: 20px;
+    margin: 10px;
+    padding-top: 8px;
+    padding-left: 8px;
+    font-weight: 400;
+  }
+  /*at all*/
+  h3{
+    padding-right:20px;
+    margin: 0px;
+    font-weight: 200;
+    color: rgb(208, 208, 208);
+  }
+  h1{
+    font-size: 20px;
+    font-weight: 400;
+    padding:0px;
+    margin:0px; 
+  }
+  h4{
+    font-weight: 200; 
+    padding:0px;
+    margin:0px; 
+  }
+
+
+.scroll-container {
+        width: 100vw;
+        height: calc(100vh - 270px);
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+   /* Styles for the progress bar container */
+    .progress-container {
+      width: 95%;/* Adjust the width as needed */
+      background-color: #ffe7a0; /* Amber background color */
+      border-radius: 10px; /* Rounded corners */
+      overflow: hidden;
+      margin-top:10px;
+      height:8px;
+    }
+
+    /* Styles for the progress bar filler */
+    .progress-filler {
+      height: 8px; /* Adjust the height as needed */
+      background-color: rgb(255, 166, 0); /* Orange filling color */
+      border-radius: 10px; /* Rounded corners */
+      transition: width 0.3s ease-in-out; /* Add a smooth transition effect */
+    }
+
+.player{
+  background-color:  rgb(255, 255, 255);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.17); 
+  z-index: 1;
+  height:250px;
+  width:92vw;
+  margin: 10px;
+  margin-bottom: 20px;
+  margin-top:10px;
+}
+
+.question-tile{
+  display: inline-block;
+   width: 85%; /* Adjust the width of each square image as needed */
+   background-color: rgb(246, 246, 246);
+   border: 2px solid rgba(0, 0, 0, 0.45);
+   border-radius: 0px;
+   padding: 15px;
+   margin: 10px;
+ }
+ .solution{
+ background-color: rgb(255, 255, 255);
+ color:rgb(0, 0, 0);
+ border-radius: 0px;
+ margin:15px;
+ margin-bottom:30px;
+ position:relative;
+ top:-15px;
+ box-shadow: 0px 4px 8px rgba(102, 102, 102, 0.17); 
+ }
+
+ .submit-button {
+  border-radius:50px;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+  width:25%;
+  color:rgba(240, 248, 255, 0);
+  position:absolute;
+  right:20px;
+}
+
+.user {
+  width: 30px; /* Replace with your image width */
+  height: 30px; /* Replace with your image height */
+  border-radius: 50%;
+}

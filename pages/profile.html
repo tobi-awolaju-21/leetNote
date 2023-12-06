@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>People notes</title>
+ <!-- Favicon -->
+ <link rel="icon" href="./leetnote.jpg" type="image/x-icon">
+ <link rel="shortcut icon" href="./leetnote.jpg" type="image/x-icon">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#FFBA3B"> <!-- Set your desired color here -->
+
+  <link rel="stylesheet" href="./style/global.css" />
+  <link rel="stylesheet" href="./style/notes.css" />
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<body>
+
+  <!-- navigation/top bar-->
+  <div class=tipBar>
+    <h2 >leetNote</h2>
+  </div>
+
+
+ 
+
+
+  <!-- peopleCourses-->
+  <div class="profile" style="text-align: center; margin-top:50px;">
+<img id="userImage"class="user" src="./pfp.png" alt="Sign in with Google" width="200px" height="200px">
+
+<h1 id="emailAddress">Email address</h1>
+<!--Start of drop down-->
+<style>
+  /* Basic styling for the dropdown */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-top:10px;
+    background-color: #e1e1e1;
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 50px;
+    width: 150px;
+  }
+
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(152, 152, 152, 0.2);
+  z-index: 1;
+  width: 150px;
+  transform: translateX(0px); /* Corrected syntax for translation */
+  transition: transform 0.3s ease; /* Added transition property for smooth animation */
+}
+
+
+  .dropdown-content a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<div class="dropdown" id="dropdown">
+<div id="selected-item">Department</div>
+<div class="dropdown-content" id="dropdown-content">
+  <!-- Dropdown content will be dynamically loaded here -->
+</div>
+</div>
+<!--end of drop down-->
+
+
+
+<style>
+     .subscribe-btn {
+        display:none;
+        margin-top: 50px;
+        margin: 20px;
+        padding: 10px 20px;
+        background-color: #3BB75E;
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50px;
+        padding-top: 15px;
+        height: 20px;
+        width: 80%;
+        position: absolute;
+        bottom:50px;
+      }
+
+      footer {
+        background-color: #efefef;
+        color: #000000;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+</style>
+<div id="subscribeBtn"class="subscribe-btn">Subscribe</div>
+<script>
+  // Get the subscribe button element
+  var subscribeBtn = document.getElementById('subscribeBtn');
+
+  // Add a click event listener to the subscribe button
+  subscribeBtn.addEventListener('click', function() {
+      // Redirect to the specified link
+      window.location.href = "https://paystack.com/pay/how5u2810o";
+  });
+</script>
+
+
+  </div>
+ 
+  </div>
+
+
+  <footer>
+    &copy; 2023 leetNote. All rights reserved.
+  </footer>
+
+
+  <div class="notefab">
+    <a href="https://wa.me/+2348133801134" style="color: #fff; text-decoration: none;">
+      <span class="material-symbols-outlined">
+        chat
+      </span>
+    </a>
+
+  </div>
+  <!-- Include the app.js file -->
+  <script  type="module" src="./js/profle.js"></script>
+  <script type="module" src="./js/user.js"></scripttype></script>
+</body>
+
+</html>
