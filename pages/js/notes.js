@@ -1,3 +1,7 @@
+if (window.gc) {
+  window.gc();
+}
+
 const url = window.location.href;
 function getParameterValue(parameterName) {
   const urlSearchParams = new URLSearchParams(new URL(url).search);
