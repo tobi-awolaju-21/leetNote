@@ -2,76 +2,120 @@ import confetti from "https://cdn.skypack.dev/canvas-confetti";
 
 
 
-// URL of the JSON data = baseurl/ +surfix of webpage.json
-//http://127.0.0.1:5500/pages/leetspace.html?courseKey=AGE%20202
-
-// Get the URL from the window location
 const url = window.location.href;
-// Function to extract the value of a parameter from the URL
+
 function getParameterValue(parameterName) {
   const urlSearchParams = new URLSearchParams(new URL(url).search);
   return urlSearchParams.get(parameterName);
 }
-// Get the value of the courseKey parameter
+
 const courseKey = getParameterValue("courseKey");
 const email = getParameterValue("email");
+const img = getParameterValue("img");
+
 // load pfp image
 const userImage = document.querySelector('.user');
 userImage.src = getParameterValue("img");
-// Log the value to the console (you can use it as needed)
 
-var jsonUrl =
-  "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses/" +
-  courseKey +
-  ".json";
+document.addEventListener("DOMContentLoaded", function () {
+ 
 
-console.log(jsonUrl);
+  var jsonUrl =
+    "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses/" +
+    courseKey +
+    ".json";
+  var peopleCoursesElement = document.querySelector(".peopleCourses");
 
-// Get the parent element by its class
-var peopleCoursesElement = document.querySelector(".peopleCourses");
+  fetch(jsonUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((jsonData) => {
+      const metadataArray = JSON.parse(jsonData.metadata);
+      metadataArray.forEach((item) => {
+        if (item.outline) {
+          
+        }
+        if (item.video) {
+          
+        }
+        if (item.note) {
+         
+        }
+        if (item.question) {
+          const questionsArray = JSON.parse(item.question);
+          questionsArray.forEach((questionItem) => {
+            const questionTileHTML = `
+              <div class="question-tile">
+                <p>${questionItem.question}</p>
+                <input class="submit-button" type="file" id="imageInput" accept="image/*" style="display: block;">
+              </div>
 
-// Fetch the JSON data
-fetch(jsonUrl)
-  .then((response) => {
-    // Check if the response status is OK (200)
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    // Parse the JSON from the response
-    return response.json();
-  })
-  .then((jsonData) => {
-    // start of magic
+              <style>
+                .solution-wrapper {
+                  cursor: pointer;
+                  user-select: none;
+                  /* Optional: Add some styles for better visual indication */
+                  border: 1px solid #ccc;
+                  padding: 10px;
+                  border-radius: 5px;
+                  margin: 15px;
+                }
 
-    const metadataArray = JSON.parse(jsonData.metadata);
+                .solution-content {
+                  display: none;
+                }
+              </style>
 
-    metadataArray.forEach((item) => {
-      // Creating divs for questions and solutions
-      if (item.question) {
-        const questionsArray = JSON.parse(item.question);
-        questionsArray.forEach((questionItem) => {
-          // Using the provided HTML snippet for questions
-          const questionTileHTML = `
-                <div class="question-tile">
-                    <p>${questionItem.question}</p>
-                    <input class="submit-button" type="file" id="imageInput" accept="image/*" style="display: block;">
+              <div class="solution-wrapper">
+                <div class="solution-content" id="solutionContent">
+                  ${questionItem.solution}
                 </div>
-                <div class="solution">
-                    ${questionItem.solution}
+                <div class="hint-text">
+                  Click to reveal solution
                 </div>
+              </div>
             `;
 
-          const questionDiv = document.createElement("div");
-          questionDiv.innerHTML += questionTileHTML;
-          peopleCoursesElement.appendChild(questionDiv);
-        });
-      }
-    });
-  })
-  .catch((error) => {
-    console.error("Error fetching JSON:", error);
-  });
+            const questionDiv = document.createElement("div");
+            questionDiv.innerHTML += questionTileHTML;
+            peopleCoursesElement.appendChild(questionDiv);
+          });
+        }
+      });
 
+      // Add event listeners for solution wrappers
+      const solutionWrappers = document.querySelectorAll(".solution-wrapper");
+
+      solutionWrappers.forEach((solutionWrapper) => {
+        solutionWrapper.addEventListener("click", function (event) {
+          // Get the clicked element
+          const clickedElement = event.currentTarget;
+
+          // Find the solution content and hint text within the clicked element
+          var solutionContent = clickedElement.querySelector('.solution-content');
+          var hintText = clickedElement.querySelector('.hint-text');
+
+          // Toggle visibility
+          if (solutionContent.style.display === 'none') {
+            // If solution is hidden, reveal it
+            solutionContent.style.display = 'block';
+            hintText.style.display = 'none';
+          } else {
+            // If solution is visible, hide it
+            solutionContent.style.display = 'none';
+            hintText.style.display = 'block';
+          }
+        });
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching JSON:", error);
+    });
+});
 
 
 
