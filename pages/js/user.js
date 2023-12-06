@@ -126,6 +126,7 @@ function updateCourseJSON(department) {
 document.addEventListener("DOMContentLoaded", function () {
   // JSON data
   const jsonData = [
+    { "department": "department" },
     { "department": "EEE 200lv" },
     { "department": "CVE 200lv" },
     { "department": "MEE 200lv" },
