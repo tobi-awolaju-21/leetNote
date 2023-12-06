@@ -115,20 +115,6 @@ button .inner-row h4 {
     font-size: 20px;
 }
 
-@media (max-width: 1300px) {
-   
-
-    .text-cont h3 {
-
-        max-width: 347px;
-        margin-bottom: 24px;
-    }
-
-    button .inner-row h4 {
-        font-size: 18px;
-        font-weight: 500;
-    }
-}
 
 @media (max-width: 992px) {
     .hero-container {
