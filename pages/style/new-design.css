@@ -1,0 +1,204 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+main {
+    display: flex;
+}
+
+.hero-container {
+    width: 45%;
+    padding: 26px 48px;
+}
+
+.hero-image {
+    height: 100vh;
+    width: 60%;
+    display: grid;
+    place-items: center;
+}
+
+.inner-image {
+    height: 96.5vh;
+    width: 96.5%;
+    background-color: #FFA600;
+    background-image: url(/assets/hero-background.png);
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-container img {
+    max-width: 70%;
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+
+}
+
+.login-btn p {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.side-container {
+    max-width: 480px;
+}
+
+.text-cont {
+    margin-block: 6em 3em;
+}
+
+.text-cont h1 {
+    font-size: 62px;
+    line-height: 59px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+
+.text-cont h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #c0c0c0;
+    /* max-width: 60px; */
+}
+
+button {
+    outline: none;
+    width: 100%;
+    background: none;
+    border: none;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 14px 0 14px 24px;
+    position: relative;
+}
+
+button::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(90deg, #FFA600 -119.66%, rgba(255, 166, 0, 0.00) 73.79%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+button .inner-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button .inner-row h4 {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+@media (max-width: 1300px) {
+   
+
+    .text-cont h3 {
+
+        max-width: 347px;
+        margin-bottom: 24px;
+    }
+
+    button .inner-row h4 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-container {
+        padding: 24px 36px;
+    }
+
+    .text-cont h1 {
+        font-size: 53px;
+        line-height: 59px;
+        max-width: 360px;
+    }
+
+    .text-cont h3 {
+        font-size: 26px;
+        line-height: 29px;
+        max-width: 347px;
+        margin-bottom: 24px;
+    }
+
+    button .inner-row h4 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        display: block;
+    }
+
+    .hero-container {
+        width: 100%;
+        padding: 0 18px;
+        margin-bottom: 4em;
+    }
+
+    .hero-container nav {
+        margin-top: 24px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 40em;
+    }
+
+    .hero-image .inner-image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container img {}
+
+    .login-btn p {
+        font-size: 18px;
+    }
+
+    .text-cont {
+        margin-block: 8em 2em;
+    }
+
+    button {
+        padding: 10px 0  10px 18px;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+
+    .inner-row img {
+        height: 24px;
+    }
+}
+
