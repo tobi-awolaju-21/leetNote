@@ -23,6 +23,51 @@ fetch(myCourses)
     console.log(jsonData);
     myCourseJsonJSON = jsonData;
     myCourseJson = JSON.stringify(jsonData);
+
+//starrt of update
+const hardcodedCourses = myCourseJsonJSON;
+
+const peopleCoursesElement = document.querySelector(".peopleCourses");
+
+hardcodedCourses.forEach(course => {
+  const { code } = course;
+
+  const newDiv2 = document.createElement("div");
+  newDiv2.className = "scroll-item2";
+  newDiv2.innerHTML = `
+    <h2>${code}</h2>
+    <div style="display:flex;">
+      <h3>9 contributors</h3>
+      <h3>60/150</h3>
+    </div>
+
+    <!-- Progress bar container -->
+    <div class="progress-container">
+      <!-- Progress bar filler -->
+      <div class="progress-filler" style="width: 50%;"></div>
+    </div>
+  `;
+
+  function redirectToNotes2(clickedCourseKey) {
+    console.log("display");
+    const encodedCourseKey = encodeURIComponent(clickedCourseKey);
+    const emailElement = document.getElementsByClassName("email")[0];
+    const imageElement = document.getElementsByClassName('user')[0];
+    const email = emailElement.innerText;
+    const img = imageElement.src;
+
+    window.location.href = `pages/notes.html?courseKey=${encodedCourseKey}&email=${email}&img=${img}`;
+  }
+
+  newDiv2.addEventListener("click", function () {
+    redirectToNotes2(code);
+  });
+
+  peopleCoursesElement.appendChild(newDiv2);
+});
+
+//end of update
+
   });
   
   
@@ -87,58 +132,6 @@ peopleSpacesElement.appendChild(newDiv);
   .catch((error) => {
     console.error("Error fetching JSON:", error);
   });
-
-
-
-
-
-
-//starrt of update
-const hardcodedCourses = myCourseJsonJSON;
-
-const peopleCoursesElement = document.querySelector(".peopleCourses");
-
-hardcodedCourses.forEach(course => {
-  const { code } = course;
-
-  const newDiv2 = document.createElement("div");
-  newDiv2.className = "scroll-item2";
-  newDiv2.innerHTML = `
-    <h2>${code}</h2>
-    <div style="display:flex;">
-      <h3>9 contributors</h3>
-      <h3>60/150</h3>
-    </div>
-
-    <!-- Progress bar container -->
-    <div class="progress-container">
-      <!-- Progress bar filler -->
-      <div class="progress-filler" style="width: 50%;"></div>
-    </div>
-  `;
-
-  function redirectToNotes2(clickedCourseKey) {
-    console.log("display");
-    const encodedCourseKey = encodeURIComponent(clickedCourseKey);
-    const emailElement = document.getElementsByClassName("email")[0];
-    const imageElement = document.getElementsByClassName('user')[0];
-    const email = emailElement.innerText;
-    const img = imageElement.src;
-
-    window.location.href = `pages/notes.html?courseKey=${encodedCourseKey}&email=${email}&img=${img}`;
-  }
-
-  newDiv2.addEventListener("click", function () {
-    redirectToNotes2(code);
-  });
-
-  peopleCoursesElement.appendChild(newDiv2);
-});
-
-//end of update
-
-
-  
 
 
 
