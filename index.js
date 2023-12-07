@@ -1,76 +1,100 @@
-var myCourses = "https://leetnote-7cfce-default-rtdb.firebaseio.com/users/tobiawolaju21/courses.json";
-
-var myCourseJson = "null"; // Default value is set to null
-var myCourseJsonJSON = []; // Default value is set to an empty array
-
-
-
-
+var myCourseJson; // Default value is set to an 
 function oneOfMyCourses(course) {
   return myCourseJson.includes(course);
 }
 
 
-fetch(myCourses)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-     
-    }
-    return response.json();
-  })
-  .then((jsonData) => {
-    console.log(jsonData);
-    myCourseJsonJSON = jsonData;
-    myCourseJson = JSON.stringify(jsonData);
+const emailElement = document.getElementsByClassName("email")[0];
+var email = emailElement.innerText;
 
-//starrt of update
-var hardcodedCourses = myCourseJsonJSON;
+email = email.replace('@gmail.com', '');
 
-const peopleCoursesElement = document.querySelector(".peopleCourses");
+// get department via
+var getDepartment = "https://leetnote-7cfce-default-rtdb.firebaseio.com/users/" + email + ".json";
 
-hardcodedCourses.forEach(course => {
-  const { code } = course;
+fetch(getDepartment)
+    .then(response => response.json())
+    .then(data => {
+        var department = data.department;
+        usersCourse(department);
+    })
+    .catch(error => console.error('Error during fetch:', error));
 
-  const newDiv2 = document.createElement("div");
-  newDiv2.className = "scroll-item2";
-  newDiv2.innerHTML = `
-    <h2>${code}</h2>
-    <div style="display:flex;">
-      <h3>9 contributors</h3>
-      <h3>60/150</h3>
-    </div>
+// get users course
+function usersCourse(department) {
+    // get courses via
+    var getCourses = "https://script.google.com/macros/s/AKfycbxwzQ_4MCVJKPsZCeAc7sradMu8VFIy6ab25-voByVkrKWJlIkgwqltXeOQHU0CYGjP/exec?department=" + department;
 
-    <!-- Progress bar container -->
-    <div class="progress-container">
-      <!-- Progress bar filler -->
-      <div class="progress-filler" style="width: 50%;"></div>
-    </div>
-  `;
+    fetch(getCourses)
+        .then(response => response.json())
+        .then(data => {
+            console.log('Response from the server:', data);
+           
+            renderCourses(data);
+            myCourseJson = data;
+            LoadContents();
+            
+        })
+        .catch(error => console.error('Error during fetch:', error));
+}
 
-  function redirectToNotes2(clickedCourseKey) {
-    console.log("display");
-    const encodedCourseKey = encodeURIComponent(clickedCourseKey);
-    const emailElement = document.getElementsByClassName("email")[0];
-    const imageElement = document.getElementsByClassName('user')[0];
-    const email = emailElement.innerText;
-    const img = imageElement.src;
+// render Courses
+function renderCourses(coursesArray) {
+    const peopleCoursesElement = document.querySelector(".peopleCourses");
 
-    window.location.href = `pages/notes.html?courseKey=${encodedCourseKey}&email=${email}&img=${img}`;
-  }
+    coursesArray.forEach(course => {
+        const { code, progress } = course;
 
-  newDiv2.addEventListener("click", function () {
-    redirectToNotes2(code);
-  });
+        const newDiv2 = document.createElement("div");
+        newDiv2.className = "scroll-item2";
+        newDiv2.innerHTML = `
+            <h2>${code}</h2>
+            <div style="display:flex;">
+                <h3>9 contributors</h3>
+                <h3>60/150</h3>
+            </div>
+            <!-- Progress bar container -->
+            <div class="progress-container">
+                <!-- Progress bar filler -->
+                <div class="progress-filler" style="width: ${progress};"></div>
+            </div>
+        `;
 
-  peopleCoursesElement.appendChild(newDiv2);
-});
+        function handleCourseClick(clickedCourseCode) {
+            const encodedCourseCode = encodeURIComponent(clickedCourseCode);
+            const emailElement = document.getElementsByClassName("email")[0];
+            const imageElement = document.getElementsByClassName('user')[0];
+            const email = emailElement.innerText;
+            const img = imageElement.src;
 
-//end of update
+            window.location.href = `pages/notes.html?courseCode=${encodedCourseCode}&email=${email}&img=${img}`;
+        }
 
-  });
-  
-  
+        newDiv2.addEventListener("click", function () {
+            handleCourseClick(code);
+        });
+
+        peopleCoursesElement.appendChild(newDiv2);
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function LoadContents(){
@@ -136,6 +160,3 @@ peopleSpacesElement.appendChild(newDiv);
 
 
 }
-
-
-LoadContents();
