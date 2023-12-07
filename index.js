@@ -12,6 +12,7 @@ fetch(myCourses)
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
+     
     }
     return response.json();
   })
@@ -19,18 +20,12 @@ fetch(myCourses)
     console.log(jsonData);
     myCourseJsonJSON = jsonData;
     myCourseJson = JSON.stringify(jsonData);
-
-    //check mate
-   // console.log(oneOfMyCourses("MTS 201"));
-    LoadContents();
-
   });
   
   
 
 
 function LoadContents(){
-
 var jsonUrl =
   "https://leetnote-7cfce-default-rtdb.firebaseio.com/classroom.json";
 var peopleSpacesElement = document.querySelector(".scroll-container");
@@ -86,12 +81,10 @@ peopleSpacesElement.appendChild(newDiv);
 
 
   })
-
-
-
   .catch((error) => {
     console.error("Error fetching JSON:", error);
   });
+
 var jsonUrl = "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses.json";
 var peopleCoursesElement = document.querySelector(".peopleCourses");
 fetch(jsonUrl)
@@ -147,7 +140,7 @@ redirectToNotes2(courseKey);
   .catch((error) => {
     console.error("Error fetching JSON:", error);
   });
-// tobi was equaly here
-
-
 }
+
+
+LoadContents();
