@@ -3,9 +3,14 @@ function oneOfMyCourses(course) {
   return myCourseJson.includes(course);
 }
 
+// Get the current URL
+var currentUrl = window.location.href;
 
-const emailElement = document.getElementsByClassName("email")[0];
-var email = emailElement.innerText;
+// Parse the URL to get the parameters
+var urlParams = new URLSearchParams(currentUrl);
+
+// Get the value of the 'email' parameter
+var email = urlParams.get('email');
 
 email = email.replace('@gmail.com', '');
 
