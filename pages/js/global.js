@@ -53,6 +53,7 @@ const signInWithGoogle = async () => {
     emailElement.textContent = emailUser;
     // Log the value of the 'email' element
     console.log('Email element value:', emailElement.innerText);
+    startIndex();
   } catch (error) {
     console.error('Error signing in with Google:', error);
   }
