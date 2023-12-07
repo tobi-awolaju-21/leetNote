@@ -25,7 +25,7 @@ fetch(myCourses)
     myCourseJson = JSON.stringify(jsonData);
 
 //starrt of update
-const hardcodedCourses = myCourseJsonJSON;
+var hardcodedCourses = myCourseJsonJSON;
 
 const peopleCoursesElement = document.querySelector(".peopleCourses");
 
