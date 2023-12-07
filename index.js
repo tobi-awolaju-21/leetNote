@@ -94,15 +94,7 @@ peopleSpacesElement.appendChild(newDiv);
 
 
 //starrt of update
-const hardcodedCourses = [
-  {"code":"MTS 202","progress":"0%"},
-  {"code":"MEE 202","progress":"0%"},
-  {"code":"MEE 206","progress":"0%"},
-  {"code":"CVE 202","progress":"0%"},
-  {"code":"AGE 204","progress":"0%"},
-  {"code":"EEE 202","progress":"0%"},
-  {"code":"CSC 202","progress":"0%"}
-];
+const hardcodedCourses = myCourseJsonJSON;
 
 const peopleCoursesElement = document.querySelector(".peopleCourses");
 
