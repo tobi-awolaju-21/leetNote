@@ -21,7 +21,7 @@ fetch(myCourses)
     myCourseJson = JSON.stringify(jsonData);
 
     //check mate
-    console.log(oneOfMyCourses("MTS 201"));
+   // console.log(oneOfMyCourses("MTS 201"));
     LoadContents();
 
   });
@@ -43,9 +43,6 @@ if (!response.ok) {
   })
   .then((jsonData) => {
  console.log(jsonData);
-
-
-  
  Object.keys(jsonData).forEach(function (courseKey) {
   if(oneOfMyCourses(courseKey)){
 
