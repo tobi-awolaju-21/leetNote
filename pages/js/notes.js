@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var jsonUrl =
     "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses/" + decodeURIComponent(courseKey) +
     ".json";
+    console.log("jsonUrl");
   var peopleCoursesElement = document.querySelector(".peopleCourses");
 
   fetch(jsonUrl)
