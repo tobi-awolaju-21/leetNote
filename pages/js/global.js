@@ -106,7 +106,7 @@ function renderCourses(coursesArray) {
         newDiv2.innerHTML = `
             <h2>${code}</h2>
             <div style="display:flex;">
-                <h3>9 Click here to go to note </h3>
+                <h3> your father paid for it </h3>
                
         `;
 
