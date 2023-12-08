@@ -72,7 +72,7 @@
       .add,
       .sub {
         color: #212121;
-        background: #ffd000;
+        background: #FFBA3B;
       }
       .equal:hover,
       .clean:hover,
@@ -82,7 +82,7 @@
       .divide:hover,
       .add:hover,
       .sub:hover {
-        color: #ffd000;
+        color: #FFBA3B;
       }
 
       .sqrt,
@@ -95,7 +95,7 @@
       .log2,
       .ln,
       .square {
-        background: #fff36c;
+        background: #FFBA3B;
       }
       .sqrt:hover,
       .tan:hover,
@@ -108,7 +108,7 @@
       .ln:hover,
       .square:hover {
         background: #212121;
-        color: #ffee33;
+        color: #FFBA3B;
       }
 
       .equal {
