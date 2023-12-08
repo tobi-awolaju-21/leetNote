@@ -69,12 +69,26 @@ email = email.replace('@gmail.com', '');
 var getDepartment = "https://leetnote-7cfce-default-rtdb.firebaseio.com/users/" + email + ".json";
 
 fetch(getDepartment)
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
     .then(data => {
         var department = data.department;
         usersCourse(department);
     })
-    .catch(error => console.error('Error during fetch:', error));
+    .catch(error => {
+        console.error('Error during fetch:', error);
+        const emailElement = document.querySelector('.email');
+        // Define or pass 'img' variable
+        // For example: var img = document.getElementById('yourImgId');
+        var email = emailElement.isnnerText;
+    const userImage2 = document.querySelector('.user');
+        var imgi = userImage2.src;
+        window.location.href = "./pages/profile.html?email=" + email + "&img=" + imgi;
+      });
 
 
     function usersCourse(department) {
