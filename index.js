@@ -1,13 +1,14 @@
 
-function startIndex(){
 
   var myCourseJson; // Default value is set to an 
   function oneOfMyCourses(course) {
     return myCourseJson.includes(course);
   }
   
-  const emailElement = document.getElementsByClassName("email")[0];
-  var email = emailElement.innerText;
+  //const emailElement = document.getElementsByClassName("email")[0];
+  //var email = emailElement.innerText;
+  var email = "tobiawolaju21@gmail.com"
+  
   
   email = email.replace('@gmail.com', '');
   
@@ -163,5 +164,3 @@ function startIndex(){
   
   }
   
-}
-
