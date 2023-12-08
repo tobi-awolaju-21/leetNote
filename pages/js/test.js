@@ -130,7 +130,7 @@ window.addEventListener("click", () => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  var noteFab = document.querySelector(".testfab");
+  var noteFab = document.querySelector(".notefab");
   noteFab.addEventListener("click", function () {
     window.location.href =
       "./calculator.html"
