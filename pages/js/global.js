@@ -81,10 +81,7 @@ fetch(getDepartment)
     })
     .catch(error => {
         console.error('Error during fetch:', error);
-        const emailElement = document.querySelector('.email');
-        // Define or pass 'img' variable
-        // For example: var img = document.getElementById('yourImgId');
-        var email = emailElement.isnnerText;
+       
     const userImage2 = document.querySelector('.user');
         var imgi = userImage2.src;
         window.location.href = "./pages/profile.html?email=" + email + "&img=" + imgi;
