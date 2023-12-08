@@ -84,7 +84,7 @@ fetch(getDepartment)
        
     const userImage2 = document.querySelector('.user');
         var imgi = userImage2.src;
-        window.location.href = "./pages/profile.html?email=" + email+"@mail.com" + "&img=" + imgi;
+        window.location.href = "./pages/profile.html?email=" + email+"@gmail.com" + "&img=" + imgi;
       });
 
 
@@ -114,7 +114,7 @@ fetch(getDepartment)
               var email = emailElement.innerText;
           const userImage2 = document.querySelector('.user');
               var imgi = userImage2.src;
-              window.location.href = "./pages/profile.html?email=" +  email+"@mail.com" + "&img=" + imgi;
+              window.location.href = "./pages/profile.html?email=" +  email+"@gmail.com" + "&img=" + imgi;
 
               console.error('Error during fetch:', error);
               // Handle the error, you can log it or redirect to a different page
