@@ -76,23 +76,38 @@ fetch(getDepartment)
     })
     .catch(error => console.error('Error during fetch:', error));
 
-// get users course
-function usersCourse(department) {
-    // get courses via
-    var getCourses = "https://script.google.com/macros/s/AKfycbxwzQ_4MCVJKPsZCeAc7sradMu8VFIy6ab25-voByVkrKWJlIkgwqltXeOQHU0CYGjP/exec?department=" + department;
 
-    fetch(getCourses)
-        .then(response => response.json())
-        .then(data => {
-            console.log('Response from the server:', data);
-           
-            renderCourses(data);
-            myCourseJson = data;
-            LoadContents();
-            
-        })
-        .catch(error => console.error('Error during fetch:', error));
-}
+    function usersCourse(department) {
+      // get courses via
+      var getCourses = "https://script.google.com/macros/s/AKfycbxwzQ_4MCVJKPsZCeAc7sradMu8VFIy6ab25-voByVkrKWJlIkgwqltXeOQHU0CYGjP/exec?department=" + department;
+  
+      fetch(getCourses)
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok');
+              }
+              return response.json();
+          })
+          .then(data => {
+              console.log('Response from the server:', data);
+              renderCourses(data);
+              myCourseJson = data;
+              LoadContents();
+          })
+          .catch(error => {
+              console.error('Error during fetch:', error);
+              // Handle the error, you can log it or redirect to a different page
+
+              const emailElement = document.querySelector('.email');
+              // Define or pass 'img' variable
+              // For example: var img = document.getElementById('yourImgId');
+              var email = emailElement.innerText;
+          const userImage2 = document.querySelector('.user');
+              var imgi = userImage2.src;
+              window.location.href = "./pages/profile.html?email=" + email + "&img=" + imgi;
+
+          });
+  }
 
 // render Courses
 function renderCourses(coursesArray) {
