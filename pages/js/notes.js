@@ -25,8 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   var jsonUrl =
-    "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses/" +
-    courseKey +
+    "https://leetnote-7cfce-default-rtdb.firebaseio.com/courses/" + decodeURIComponent(courseKey) +
     ".json";
   var peopleCoursesElement = document.querySelector(".peopleCourses");
 
