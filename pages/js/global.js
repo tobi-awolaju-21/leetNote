@@ -106,14 +106,8 @@ function renderCourses(coursesArray) {
         newDiv2.innerHTML = `
             <h2>${code}</h2>
             <div style="display:flex;">
-                <h3>9 contributors</h3>
-                <h3>60/150</h3>
-            </div>
-            <!-- Progress bar container -->
-            <div class="progress-container">
-                <!-- Progress bar filler -->
-                <div class="progress-filler" style="width: ${progress};"></div>
-            </div>
+                <h3>9 Click here to go to note </h3>
+               
         `;
 
         function handleCourseClick(clickedCourseCode) {
