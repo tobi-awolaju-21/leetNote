@@ -114,7 +114,7 @@
     .then((jsonData) => {
    console.log(jsonData);
    Object.keys(jsonData).forEach(function (courseKey) {
-    if(oneOfMyCourses(courseKey)){
+   
   
   var newDiv = document.createElement("div");
         newDiv.className = "scroll-item";
@@ -150,7 +150,7 @@
           checkIfUserSignedIn();
         });
   peopleSpacesElement.appendChild(newDiv);
-  }
+
       });
   
   
