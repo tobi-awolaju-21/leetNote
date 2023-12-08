@@ -50,21 +50,13 @@ const signInWithGoogle = async () => {
     }
     // Set the text content of the emailElement to "hello world"
     const emailElement = document.getElementsByClassName('email')[0];
-    emailElement.textContent = emailUser;
-    // Log the value of the 'email' element
-    console.log('Email element value:', emailElement.innerText);
+  
   
 //start of index
 
-var myCourseJson; // Default value is set to an 
-function oneOfMyCourses(course) {
-  return myCourseJson.includes(course);
-}
-
-//const emailElement = document.getElementsByClassName("email")[0];
-//var email = emailElement.innerText;
-var email = "tobiawolaju21@gmail.com"
-
+var email = emailElement.innerText;
+// Log the value of the 'email' element
+console.log('Email element value:', emailElement.innerText);
 
 email = email.replace('@gmail.com', '');
 
