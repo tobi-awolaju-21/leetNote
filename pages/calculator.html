@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+        <title>People notes</title>
+       <!-- Favicon -->
+       <link rel="icon" href="./leetnote.jpg" type="image/x-icon">
+       <link rel="shortcut icon" href="./leetnote.jpg" type="image/x-icon">
+      
+      
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="theme-color" content="#FFBA3B"> <!-- Set your desired color here -->
+      
+        <link rel="stylesheet" href="./style/global.css" />
+        <link rel="stylesheet" href="./style/notes.css" />
+      
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      
+    
+
+
+
+	<link rel="stylesheet" href="./style/calculator.css">
+	
+</head>
+
+
+
+
+<body>
+ <!-- navigation/top bar-->
+ <div class=tipBar>
+
+
+    
+    <h2 style="font-family: 'VT323', monospace; font-weight: 200; font-size: large;">leetNote</h2>
+    <img class="user"
+      src="./pfp.png"
+      alt="Sign in with Google">
+  </div>
+
+
+
+	<div class="calculator">
+		<div class="header">
+			<input type="text" placeholder="0,00" class="input">
+			<input type="text" placeholder="0,00" class="output" readonly>
+		</div>
+		<div class="main">
+			<button class="btn clean" onclick="clean()">C</button>
+			<button class="btn back" onclick="backspace()"><i class="fas fa-backspace"></i></button>
+			<button class="btn persent" onclick="percent('%')"><i class="fas fa-percent"></i></button>
+			<button class="btn divide" onclick="insert('/')"><i class="fas fa-divide"></i></button>
+			<button class="btn multi" onclick="insert('*')"><i class="fas fa-times"></i></button>
+			<button class="btn sub" onclick="insert('-')">-</button>
+			<button class="btn add" onclick="insert('+')">+</button>
+			<button class="btn seven" onclick="insert('7')">7</button>
+			<button class="btn eight" onclick="insert('8')">8</button>
+			<button class="btn nine" onclick="insert('9')">9</button>
+			<button class="btn left--parenthesis" onclick="insert('(')">(</button>
+			<button class="btn four" onclick="insert('4')">4</button>
+			<button class="btn five" onclick="insert('5')">5</button>
+			<button class="btn six" onclick="insert('6')">6</button>
+			<button class="btn right--parenthesis" onclick="insert(')')">)</button>
+			<button class="btn one" onclick="insert('1')">1</button>
+			<button class="btn two" onclick="insert('2')">2</button>
+			<button class="btn three" onclick="insert('3')">3</button>
+			<button class="btn zero" onclick="insert('0')">0</button>
+
+			<button class="btn sqrt" onclick="btn_sqrt('&radic;')"><i class="fas fa-square-root-alt"></i></button>
+
+			<!-------------------------- trigonometric functions --------------------------->
+			<button class="btn tan" onclick="tan('tan')">tan</button>
+			<button class="btn sin" onclick="sin('sin')">sin</button>
+			<button class="btn cos" onclick="cos('cos')">cos</button>
+			<button class="btn negNum" onclick="negNum('negNum')">1/n</button>			
+			<button class="btn factorial" onclick="factorial('!n')">n!</button>
+			<button class="btn log2" onclick="log2('log2')">log2</button>
+			<button class="btn ln" onclick="ln('ln')">ln</button>
+			<button class="btn square" onclick="square('square')">x^y</button>
+			
+			<!------------------------------------------------------------------------------>
+			<!-------------------------- constans --------------------------->
+			<button class="btn pi" onclick="pi('pi')">pi</button>
+			<button class="btn e" onclick="e('e')">e</button>
+			<!------------------------------------------------------------------------------>
+
+			<button class="btn dot" onclick="insert('.')">.</button>
+			<button class="btn equal" onclick="equal('')"><i class="fas fa-equals"></i></button>
+			<button class="btn hide-show"><i class="far fa-window-restore"></i></button>
+			<button class="btn convers">convers</button>
+			<button class="btn deg">deg</button>
+		</div>
+	</div>
+
+
+	<script src="https://kit.fontawesome.com/d3b9a0e4ec.js" crossorigin="anonymous"></script>
+	<script src="./js/calculator.js"></script>
+</body>
+
+</html>

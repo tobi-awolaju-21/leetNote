@@ -1,0 +1,257 @@
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .calculator {
+    display: grid;
+    margin: 5% auto;
+    width: 80%;
+    max-width: 460px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.75);
+    .header {
+      height: 100px;
+      padding: 37px 29px 27px;
+      background: #212121;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      text-align: right;
+      .input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #d98192;
+        font-size: 18px;
+        text-align: right;
+      }
+      .input::placeholder {
+        color: #d98192;
+      }
+      .output {
+        width: 100%;
+        margin-top: 18px;
+        text-align: right;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 60px;
+        color: #fff;
+      }
+      .output::placeholder {
+        color: #fff;
+      }
+    }
+    .main {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      .btn {
+        width: 100%;
+        height: 92px;
+        border: none;
+        font-size: 22px;
+        color: #212121;
+        outline: none;
+        text-align: center;
+        font-weight: 700;
+  
+        transition: background-color 0.3s linear, color 0.3s linear;
+      }
+      .btn:hover {
+        background: #212121;
+        color: #dddddd;
+  
+        cursor: pointer;
+      }
+      .equal,
+      .clean,
+      .back,
+      .persent,
+      .multi,
+      .divide,
+      .add,
+      .sub {
+        color: #212121;
+        background: #ffd000;
+      }
+      .equal:hover,
+      .clean:hover,
+      .back:hover,
+      .persent:hover,
+      .multi:hover,
+      .divide:hover,
+      .add:hover,
+      .sub:hover {
+        color: #ffd000;
+      }
+
+      .sqrt,
+      .tan,
+      .sin,
+      .cos,
+      .negNum,
+      .pi,
+      .factorial,
+      .log2,
+      .ln,
+      .square {
+        background: #fff36c;
+      }
+      .sqrt:hover,
+      .tan:hover,
+      .sin:hover,
+      .cos:hover,
+      .negNum:hover,
+      .pi:hover,
+      .factorial:hover,
+      .log2:hover,
+      .ln:hover,
+      .square:hover {
+        background: #212121;
+        color: #ffee33;
+      }
+
+      .equal {
+        grid-column: 5/6;
+      }
+      .clean {
+        grid-column: 2/3;
+        grid-row: 3/4;
+      }
+      .back {
+        grid-column: 3/4;
+        grid-row: 3/4;
+      }
+      .divide {
+        grid-column: 5/6;
+        grid-row: 3/4;
+      }
+      .multi {
+        grid-column: 5/6;
+        grid-row: 4/5;
+      }
+      .sub {
+        grid-column: 5/6;
+        grid-row: 5/6;
+      }
+      .add {
+        grid-column: 5/6;
+        grid-row: 6/7;
+      }
+      .persent {
+        grid-column: 4/5;
+        grid-row: 3/4;
+      }
+      .dot {
+        grid-column: 4/5;
+      }
+     
+
+
+
+      .one {
+        grid-column: 2/3;
+        grid-row: 6/7;
+      }
+      .two {
+        grid-column: 3/4;
+        grid-row: 6/7;
+      }
+      .three {
+        grid-column: 4/5;
+        grid-row: 6/7;
+      }
+      .four {
+        grid-column: 2/3;
+        grid-row: 5/6;
+      }
+      .five {
+        grid-column: 3/4;
+        grid-row: 5/6;
+      }
+      .six {
+        grid-column: 4/5;
+        grid-row: 5/6;
+      }
+      .seven {
+        grid-column: 2/3;
+        grid-row: 4/5;
+      }
+      .eight {
+        grid-column: 3/4;
+        grid-row: 4/5;
+      }
+      .nine {
+        grid-column: 4/5;
+        grid-row: 4/5;
+      }
+      .zero {
+        grid-column: 3/4;
+        grid-row: 7/8;
+      }
+
+
+
+      .tan {
+        grid-column: 5/6;
+        grid-row: 1/2;
+      }
+      .cos {
+        grid-column: 4/5;
+        grid-row: 1/2;
+      }
+      .sin {
+        grid-column: 3/4;
+        grid-row: 1/2;
+      }
+      .log2 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+      .ln {
+        grid-column: 3/4;
+        grid-row: 2/3;
+      }
+      .square {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+
+
+
+      .left--parenthesis {
+        grid-column: 4/5;
+        grid-row: 2/3;
+      }
+      .right--parenthesis {
+        grid-column: 5/6;
+        grid-row: 2/3;
+      }
+
+
+
+      .convers {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+      .deg {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+      .hide-show {
+        grid-column: 1/2;
+        grid-row: 7/8;
+      }
+
+
+
+      .e {
+        grid-column: 2/3;
+        grid-row: 7/8;
+      }
+
+
+
+    }
+  }
+  

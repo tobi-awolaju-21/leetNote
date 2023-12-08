@@ -124,3 +124,15 @@ confetti();
 window.addEventListener("click", () => {
   confetti();
 });
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var noteFab = document.querySelector(".testfab");
+  noteFab.addEventListener("click", function () {
+    window.location.href =
+      "./calculator.html"
+  });
+});
