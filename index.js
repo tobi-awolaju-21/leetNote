@@ -70,7 +70,7 @@
               const email = emailElement.innerText;
               const img = imageElement.src;
   
-              window.location.href = `pages/notes.html?courseCode=${encodedCourseCode}&email=${email}&img=${img}`;
+              window.location.href = `pages/notes.html?courseKey=${encodedCourseCode}&email=${email}&img=${img}`;
           }
   
           newDiv2.addEventListener("click", function () {
