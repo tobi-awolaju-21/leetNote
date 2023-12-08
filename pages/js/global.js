@@ -95,8 +95,7 @@ fetch(getDepartment)
               LoadContents();
           })
           .catch(error => {
-              console.error('Error during fetch:', error);
-              // Handle the error, you can log it or redirect to a different page
+             
 
               const emailElement = document.querySelector('.email');
               // Define or pass 'img' variable
@@ -105,6 +104,9 @@ fetch(getDepartment)
           const userImage2 = document.querySelector('.user');
               var imgi = userImage2.src;
               window.location.href = "./pages/profile.html?email=" + email + "&img=" + imgi;
+
+              console.error('Error during fetch:', error);
+              // Handle the error, you can log it or redirect to a different page
 
           });
   }
