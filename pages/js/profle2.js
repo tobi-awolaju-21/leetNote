@@ -1,5 +1,5 @@
 // profile Chart
-let jsonLength = 365;
+let jsonLength = 91;// 91 days
 let data;
 let grid = 14;
 let cellSize;
@@ -12,19 +12,19 @@ function preload() {
 
 function setup() {
   // Create a canvas inside the specified div
-  canvas = createCanvas(52 * grid, 7 * grid);
+  canvas = createCanvas(13 * grid, 7 * grid);
   canvas.parent('ProgressChart'); // Specify the parent div by its ID
 
-  cellSize = width / 52;
+  cellSize = width / 13;
   noStroke();
 }
 
 function draw() {
   background(255);
 
-  for (let i = 0; i < 52; i++) {
+  for (let i = 0; i < 13; i++) {
     for (let j = 0; j < 7; j++) {
-      let index = i + j * 52;
+      let index = i + j * 13;
       let x = i * cellSize;
       let y = j * grid;
 
@@ -32,7 +32,7 @@ function draw() {
 
       strokeWeight(2.5);
       stroke(250, opacity, 250);
-      let darkerGreen = color(250, opacity, 250);
+      let darkerGreen = color(opacity, 250, opacity);
 
       fill(darkerGreen);
       rect(x, y, cellSize, grid, 0);
